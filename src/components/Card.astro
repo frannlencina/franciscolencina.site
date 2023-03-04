@@ -1,0 +1,103 @@
+---
+import VerMasButton from "./VerMasButton.astro";
+import DetailsModal from "./DetailsModal";
+
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+	imageUrl: string;
+	tech1: string;
+	tech2: string;
+	tech3: string;
+	tech4: string;
+}
+
+const { href, title, body, imageUrl, tech1, tech2, tech3, tech4 } = Astro.props;
+---
+
+<li class="link-card flex flex-col items-end w-full gap-2 mb-8">
+	<div class="flex flex-col sm:flex-row">
+		<div class="Image flex justify-center items-center w-1/2 m-4">
+			<img class="rounded-md" src={imageUrl} alt="" srcset="" />
+		</div>
+		<div id="Body" class="m-4 flex flex-col justify-around">
+			<div>
+				<h2 class="md:text-2xl font-black opacity-80">
+					{title}
+				</h2>
+			</div>
+			<div>
+				<p class="max-w-sm break-all md:text-lg">
+					{body}
+				</p>
+			</div>
+			<div class="footer w-full flex">
+				<div id="imagenes" class="w-full items-center">
+					<img
+						class="hover:scale-105 duration-300 cursor-pointer h-8"
+						src={tech1}
+						alt=""
+					/>
+					<img
+						class="hover:scale-105 duration-300 cursor-pointer h-8"
+						src={tech2}
+						alt=""
+					/>
+					<img
+						class="hover:scale-105 duration-300 cursor-pointer h-8"
+						src={tech3}
+						alt=""
+					/>
+					<img
+						class="hover:scale-105 duration-300 cursor-pointer h-8"
+						src={tech4}
+						alt=""
+					/>
+				</div>
+				<div class="w-1/2">
+					<div>
+						<div
+							class="flex text-center justify-center p-2 bg-[var(--blue)] rounded-md text-white hover:text-blue-400 duration-300 cursor-pointer"
+						>
+							<a class="flex">Detalles<i class="ri-arrow-right-line"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</li>
+<style>
+	#imagenes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+	}
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 0.25rem;
+		background-color: white;
+	}
+
+	.link-card > a {
+		width: 100%;
+		text-decoration: none;
+		line-height: 1.4;
+		padding: 5px;
+		border-radius: 0.35rem;
+		color: #111;
+		opacity: 0.8;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.25rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 0.5rem;
+		font-family: "Space Mono", monospace;
+		margin-bottom: 0;
+		color: #444;
+	}
+</style>

@@ -1,0 +1,36 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title} = Astro.props;
+---
+
+<div class="pt-24 text-center" >
+    <h2 class="title-gradient py-4 mb-8">{title}</h2>
+</div>
+<style>
+    .title-gradient{
+    background-image: var(--blue-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		font-weight: 800;
+    font-size: 35px;
+	}
+	@media (min-width: 400px) {
+  .title-gradient {
+    font-size: 50px;
+  }
+}
+@media (min-width: 640px) {
+  .title-gradient {
+    font-size: 65px;
+  }
+}
+
+p{
+  font-family: monospace;
+}
+</style>

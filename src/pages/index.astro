@@ -1,0 +1,179 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Titles from "../components/Titles.astro";
+import DvButton from "../components/DvButton";
+import SocialLine from "../components/SocialLine.astro";
+import DetailsModal from "../components/DetailsModal";
+
+import EmojiMano from "../assets/mano-emoji.png";
+import Logo from "../assets/imgs/Logo3.png";
+
+import Footer from "../components/Footer.astro";
+
+import Habilidades from "../pages/habilidades.astro";
+import Proyectos from "../pages/proyectos.astro";
+---
+
+<Layout title="Francisco Lencina : Portfolio">
+	<button
+		class="sm:fixed text-white bg-black hover:bg-[var(--blue)] p-3 text-lg sm:right-20 lg:right-52 bottom-16 z-20 border-none hover:duration-300 cursor-pointer outline-none border rounded-md"
+		id="scrollBtn"
+		title="Scroll to top"><i class="ri-arrow-up-line"></i></button
+	>
+	<SocialLine />
+	<Navbar />
+	<div class="container max-w-5xl m-0 mx-auto p-6">
+		<div class="PROFILE hidden 2xl:block absolute opacity-10 rotate-90 ">
+			<h4>PROFILE</h4>
+		</div>
+		<div class="justify-center sm:flex sm:justify-between">
+			<div>
+				<div class="main-text">
+					<p class="hi-text text-xl mb-4 mt-10">
+						Hola! <img class="emojiImage hover:scale-110 cursor-pointer duration-300" src={EmojiMano} />, Soy
+					</p>
+					<div class="flex flex-col gap-2 sm:relative sm:-top-5">
+						<h2
+							class="Francisco text-4xl relative top-0 sm:text-6xl sm:top-5 md:text-7xl"
+						>
+							Francisco
+						</h2>
+						<h2
+							class="Lencina text-4xl relative -top-3 sm:text-6xl sm:top-0 md:text-7xl"
+						>
+							Lencina
+						</h2>
+					</div>
+				</div>
+				<div class="main-info max-w-sm mt-6">
+					<div>
+						
+						<p class="text-info mb-5">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim a
+						</p>
+					</div>
+					<div class="flex justify-start">
+						<DvButton />
+					</div>
+				</div>
+			</div>
+			<div class="flex justify-center mt-12 mb-24 p-6">
+				<img class="w-96 h-full" src={Logo} alt="" srcset="" />
+			</div>
+		</div>
+		<div class="scrollDownBtn w-full flex justify-center">
+			<a
+				class="text-6xl text-[var(--blue)] hover:text-black hover:scale-110 duration-300"
+				href="#Habilidades"><i class="ri-arrow-down-s-line"></i></a
+			>
+		</div>
+		<section id="Habilidades" class="mt-36">
+			<div class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 ">
+				<h4>SKILLS</h4>
+			</div>
+			<Titles title="Habilidades"/>
+			<Habilidades />
+		</section>
+		<section id="Proyectos">
+			<div class="PROJECTS hidden 2xl:block absolute opacity-10 rotate-90 ">
+				<h4>PROJECTS</h4>
+			</div>
+			<Titles title="Proyectos" />
+			<Proyectos />
+		</section>
+		<Footer />
+	</div>
+</Layout>
+
+<style>
+	.PROFILE{
+		font-family: 'Playfair Display', serif;
+		font-size: 170px;
+		letter-spacing: 20px;
+		left: -300px;
+		top: 370px;
+		pointer-events: none;
+	}
+	.SKILLS{
+		box-sizing: border-box;
+		font-family: 'Playfair Display', serif;
+		font-size: 200px;
+		right: -300px;
+		top: 1400px;
+		letter-spacing: 30px;
+		pointer-events: none;
+	}
+	.PROJECTS{
+		font-family: 'Playfair Display', serif;
+		font-size: 160px;
+		letter-spacing: 20px;
+		left: -300px;
+		bottom: -1700px;
+		pointer-events: none;
+	}
+	.hi-text {
+		display: flex;
+		font-family: "Space Mono", monospace;
+		font-weight: 400;
+
+		position: relative;
+		top: 0px;
+	}
+	.Francisco {
+		background-image: var(--blue-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		font-weight: 800;
+		margin: 0px;
+	}
+	.Lencina {
+		background-image: var(--black-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		font-weight: 800;
+		margin: 0;
+	}
+
+	.text-info {
+		font-family: "Space Mono", monospace;
+	}
+
+	#scrollBtn {
+		display: none;
+	}
+</style>
+
+<script>
+	let scrollBtn = document.getElementById("scrollBtn");
+
+	// 20px from the top show the button
+	window.onscroll = function () {
+		scrollFunction();
+	};
+
+	scrollBtn.addEventListener("click", () => {
+		topFunction();
+	});
+	function scrollFunction() {
+		if (
+			document.body.scrollTop > 20 ||
+			document.documentElement.scrollTop > 20
+		) {
+			scrollBtn.style.display = "block";
+		} else {
+			scrollBtn.style.display = "none";
+		}
+	}
+
+	function topFunction() {
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+</script>
