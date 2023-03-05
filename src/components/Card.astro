@@ -1,19 +1,18 @@
 ---
-import VerMasButton from "./VerMasButton.astro";
-import DetailsModal from "./DetailsModal";
 
 export interface Props {
 	title: string;
 	body: string;
 	href: string;
 	imageUrl: string;
+	project: string;
 	tech1: string;
 	tech2: string;
 	tech3: string;
 	tech4: string;
 }
 
-const { href, title, body, imageUrl, tech1, tech2, tech3, tech4 } = Astro.props;
+const { href, title, body, imageUrl, project, tech1, tech2, tech3, tech4 } = Astro.props;
 ---
 
 <li class="link-card flex flex-col items-end w-full gap-2 mb-8">
@@ -60,7 +59,7 @@ const { href, title, body, imageUrl, tech1, tech2, tech3, tech4 } = Astro.props;
 						<div
 							class="flex text-center justify-center p-2 bg-[var(--blue)] rounded-md text-white hover:text-blue-400 duration-300 cursor-pointer"
 						>
-							<a class="flex">Detalles<i class="ri-arrow-right-line"></i></a>
+							<a class="flex" href={`/projects/`+project} >Detalles<i class="ri-arrow-right-line"></i></a>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [
+    {params: {project: 'SafePvP'}},
+    {params: {project: 'Keyswh'}},
+  ];
+}
+
+const { project } = Astro.params;
+---
+<Layout title="Francisco Lencina : Portfolio">
+  <div class="container max-w-3xl	mx-auto flex justify-center">
+    <div class="text-6xl font-black opacity-90">{project}</div>
+    <div class="image"><img src="" alt="" srcset=""></div>
+    <div class="description"></div>
+  </div>
+</Layout>
