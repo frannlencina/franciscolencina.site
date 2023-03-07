@@ -1,10 +1,12 @@
 ---
-import emojiMio from "../assets/face-emoji.png";
 import DvButton from "./DvButton";
+import ToggleDarkBtn from "./ToggleDarkBtn";
+
+import emojiMio from "../assets/face-emoji.png";
 ---
 
 <div
-    class="Navbar bg-white flex items-center flex-col m-auto sm:flex-row sm:place-content-between max-w-6xl px-7 py-3 rounded-xl"
+    class="Navbar bg-white flex items-center flex-col gap-2 m-auto sm:flex-row sm:place-content-between max-w-6xl px-7 py-3 rounded-xl dark:text-white dark:bg-[#272D40] duration-300"
 >
     <div class="">
         <a href="/"
@@ -16,20 +18,11 @@ import DvButton from "./DvButton";
             /></a
         >
     </div>
-    <div>
+    <div class="flex items-center gap-2">
         <DvButton />
+        <ToggleDarkBtn client:load />
     </div>
-    <div class="flex gap-2">
-        <select name="select">
-            <option value="value1" selected>Español</option>
-            <option value="value2">English</option>
-          </select>
-        <button class="text-xl"><i class="ri-moon-clear-line"></i></button>
-    </div>
-    <input type="checkbox" name="" id="check" />
-    <label class="flex sm:hidden mb-2 text-lg" id="checkbox" for="check"
-        ><i class="ri-menu-3-line px-5"></i></label
-    >
+
 </div>
 <style>
     #check {
@@ -54,14 +47,12 @@ import DvButton from "./DvButton";
             font-size: 24px;
             width: 100%;
             height: 100vh;
-            color: white;
             border-radius: 1000px 0px 0px 1000px;
             background-color: #1c1c1c;
             opacity: 1;
-            top: 130px;
+            top: 200px;
             left: 100%;
             z-index: 2;
-
             transition: all 0.3s ease-in-out;
         }
 
@@ -79,17 +70,5 @@ import DvButton from "./DvButton";
         }
     }
 </style>
-<script>/*
-<ul class="listaNavbar flex items-center gap-5 font-bold text-lg">
-    <li class="sm:flex sm:items-center sm:gap-5">
-        <a class="transition hover:text-[#344FA0]" href="#Habilidades"
-            >Habilidades</a
-        >
-        <a class="transition hover:text-[#344FA0]" href="#Proyectos"
-            >Proyectos</a
-        >
-        <DvButton />
-    </li>
-</ul>
-*/
+<script>
 </script>

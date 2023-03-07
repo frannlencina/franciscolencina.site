@@ -11,33 +11,34 @@ import Footer from "../components/Footer.astro";
 
 import Habilidades from "../pages/habilidades.astro";
 import Proyectos from "../pages/proyectos.astro";
+
+
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
 	<button
-		class="sm:fixed text-white bg-black hover:bg-[var(--blue)] p-3 text-lg sm:right-20 lg:right-52 bottom-16 z-20 border-none hover:duration-300 cursor-pointer outline-none border rounded-md"
+		class="fixed text-white bg-black hover:bg-[var(--blue)] p-3 text-lg right-4 sm:right-20 lg:right-52 bottom-16 z-20 border-none hover:duration-300 cursor-pointer outline-none border rounded-md"
 		id="scrollBtn"
-		title="Scroll to top"><i class="ri-arrow-up-line"></i></button
-	>
+		title="Scroll to top"><i class="ri-arrow-up-line"></i></button>
 	<SocialLine />
-	<div class="container max-w-5xl m-0 mx-auto p-6">
-		<div class="PROFILE hidden 2xl:block absolute opacity-10 rotate-90 ">
+	<div class="container max-w-5xl m-0 mx-auto p-6 ">
+		<div class="PROFILE hidden 2xl:block absolute opacity-10 rotate-90 dark:text-[--blue] dark:opacity-20">
 			<h4>PROFILE</h4>
 		</div>
 		<div class="justify-center sm:flex sm:justify-between">
 			<div>
-				<div class="main-text">
+				<div class="main-text dark:text-white duration-300">
 					<p class="hi-text text-xl mb-4 mt-10">
 						Hola! <img class="emojiImage hover:scale-110 cursor-pointer duration-300" src={EmojiMano} />, Soy
 					</p>
 					<div class="flex flex-col gap-2 sm:relative sm:-top-5">
 						<h2
-							class="Francisco text-4xl relative top-0 sm:text-6xl sm:top-5 md:text-7xl"
+							class="Francisco text-4xl relative top-0 sm:text-6xl sm:top-5 md:text-7xl dark:bg-gradient-to-r from-[var(--blue)] to-white"
 						>
 							Francisco
 						</h2>
 						<h2
-							class="Lencina text-4xl relative -top-3 sm:text-6xl sm:top-0 md:text-7xl"
+							class="Lencina text-4xl relative -top-3 sm:text-6xl sm:top-0 md:text-7xl dark:bg-gradient-to-r from-white to-[var(--blue)]"
 						>
 							Lencina
 						</h2>
@@ -45,11 +46,9 @@ import Proyectos from "../pages/proyectos.astro";
 				</div>
 				<div class="main-info max-w-sm mt-6">
 					<div>
-						
-						<p class="text-info mb-5">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim a
+						<p class="text-info mb-5 dark:text-white duration-300">
+							Tengo 18 años y soy Front End Developer.
+							Autodidacta, apasionado por la tecnologia y el como esta desarrollada.
 						</p>
 					</div>
 					<div class="flex justify-start">
@@ -63,19 +62,19 @@ import Proyectos from "../pages/proyectos.astro";
 		</div>
 		<div class="scrollDownBtn w-full flex justify-center">
 			<a
-				class="text-6xl text-[var(--blue)] hover:text-black hover:scale-110 duration-300"
+				class="text-6xl text-[var(--blue)] hover:text-black hover:scale-110 dark:hover:text-white duration-300"
 				href="#Habilidades"><i class="ri-arrow-down-s-line"></i></a
 			>
 		</div>
 		<section id="Habilidades" class="mt-36">
-			<div class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 ">
+			<div class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-[--blue] dark:opacity-20">
 				<h4>SKILLS</h4>
 			</div>
 			<Titles title="Habilidades"/>
 			<Habilidades />
 		</section>
 		<section id="Proyectos">
-			<div class="PROJECTS hidden 2xl:block absolute opacity-10 rotate-90 ">
+			<div class="PROJECTS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-[--blue] dark:opacity-20 ">
 				<h4>PROJECTS</h4>
 			</div>
 			<Titles title="Proyectos" />
@@ -115,7 +114,6 @@ import Proyectos from "../pages/proyectos.astro";
 		display: flex;
 		font-family: "Space Mono", monospace;
 		font-weight: 400;
-
 		position: relative;
 		top: 0px;
 	}
@@ -128,6 +126,17 @@ import Proyectos from "../pages/proyectos.astro";
 		font-weight: 800;
 		margin: 0px;
 	}
+
+	h2.dark{
+		background-image: var(--blue-white);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		font-weight: 800;
+		margin: 0px;
+	}
+
 	.Lencina {
 		background-image: var(--black-gradient);
 		-webkit-background-clip: text;
@@ -144,7 +153,8 @@ import Proyectos from "../pages/proyectos.astro";
 
 	#scrollBtn {
 		display: none;
-	}
+
+}
 </style>
 
 <script>

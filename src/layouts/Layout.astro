@@ -7,6 +7,7 @@ export interface Props {
 
 const { title } = Astro.props;
 
+
 ---
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="duration-300">
 		<Navbar></Navbar>
 		<slot />
 	</body>
@@ -29,6 +30,11 @@ const { title } = Astro.props;
 	@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 	:root {
 		--blue: #3450A2;
+		--blue-dark: #272D40;
+		--blue-deep: #141825;
+		--black: rgba(46,46,46,1);
+		--blue-white: linear-gradient(90deg, #3450A2 10.77%, #CFCFCF 82.04%, #FFFFFF 97.06%);
+		--white-blue: linear-gradient(270.05deg, #3450A4 -5.55%, #FFFFFF 110.25%);
 		--blue-gradient: linear-gradient(90deg,rgba(52,80,164,1) 0%, rgba(46,46,46,1) 20%, rgba(46,46,46,1) 60%);
 		--black-gradient: linear-gradient(90deg, rgba(46,46,46,1) 0%, rgba(52,80,164,1) 10%, rgba(52,80,164,1) 60%);
 	}
@@ -41,5 +47,10 @@ const { title } = Astro.props;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
-
+	.dark{
+		background-color: #141825;
+	}
 </style>
+<script>
+
+</script>

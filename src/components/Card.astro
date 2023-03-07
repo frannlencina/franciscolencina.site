@@ -15,19 +15,19 @@ export interface Props {
 const { href, title, body, imageUrl, project, tech1, tech2, tech3, tech4 } = Astro.props;
 ---
 
-<li class="link-card flex flex-col items-end w-full gap-2 mb-8">
+<li class="link-card flex flex-col items-end w-full gap-2 mb-8 dark:bg-[var(--blue-dark)] rounded-lg dark:text-white">
 	<div class="flex flex-col sm:flex-row">
 		<div class="Image flex justify-center items-center w-1/2 m-4">
 			<img class="rounded-md" src={imageUrl} alt="" srcset="" />
 		</div>
 		<div id="Body" class="m-4 flex flex-col justify-around">
 			<div>
-				<h2 class="md:text-2xl font-black opacity-80">
+				<h2 class="md:text-2xl font-black opacity-80 dark:text-white dark:opacity-100">
 					{title}
 				</h2>
 			</div>
-			<div>
-				<p class="max-w-sm break-all md:text-lg">
+			<div class="">
+				<p class="max-w-sm break-all md:text-lg dark:text-white dark:opacity-80">
 					{body}
 				</p>
 			</div>
@@ -57,7 +57,7 @@ const { href, title, body, imageUrl, project, tech1, tech2, tech3, tech4 } = Ast
 				<div class="w-1/2">
 					<div>
 						<div
-							class="flex text-center justify-center p-2 bg-[var(--blue)] rounded-md text-white hover:text-blue-400 duration-300 cursor-pointer"
+							class="flex text-center justify-center p-2 bg-[var(--blue)] dark:bg-[var(--blue-deep)] rounded-md text-white hover:text-blue-400 duration-300 cursor-pointer"
 						>
 							<a class="flex" href={`/projects/`+project} >Detalles<i class="ri-arrow-right-line"></i></a>
 						</div>
@@ -78,6 +78,8 @@ const { href, title, body, imageUrl, project, tech1, tech2, tech3, tech4 } = Ast
 		padding: 0.25rem;
 		background-color: white;
 	}
+
+
 
 	.link-card > a {
 		width: 100%;
