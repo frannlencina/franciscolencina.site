@@ -22,14 +22,14 @@ import Proyectos from "../pages/proyectos.astro";
 		title="Scroll to top"><i class="ri-arrow-up-line"></i></button>
 	<SocialLine />
 	<div class="container max-w-5xl m-0 mx-auto p-6 ">
-		<div class="PROFILE hidden 2xl:block absolute opacity-10 rotate-90 dark:text-[--blue] dark:opacity-20">
+		<div class="PROFILE hidden 2xl:block absolute opacity-10 rotate-90 dark:text-[--blue] dark:opacity-20 scroll-mx-0">
 			<h4>PROFILE</h4>
 		</div>
 		<div class="justify-center sm:flex sm:justify-between">
 			<div>
 				<div class="main-text dark:text-white duration-300">
 					<p class="hi-text text-xl mb-4 mt-10">
-						Hola! <img class="emojiImage hover:scale-110 cursor-pointer duration-300" src={EmojiMano} />, Soy
+						Hola! <img class="emojiImage hover:scale-110 cursor-pointer duration-300" src={EmojiMano} alt="emoji mano" />, Soy
 					</p>
 					<div class="flex flex-col gap-2 sm:relative sm:-top-5">
 						<h2
@@ -38,7 +38,7 @@ import Proyectos from "../pages/proyectos.astro";
 							Francisco
 						</h2>
 						<h2
-							class="Lencina text-4xl relative -top-3 sm:text-6xl sm:top-0 md:text-7xl dark:bg-gradient-to-r from-white to-[var(--blue)]"
+							class="Lencina inline-flex w-fit text-4xl relative -top-3 sm:text-6xl sm:top-0 md:text-7xl dark:bg-gradient-to-r from-[var(--blue-pastel)] to-[var(--blue)]"
 						>
 							Lencina
 						</h2>
@@ -57,24 +57,25 @@ import Proyectos from "../pages/proyectos.astro";
 				</div>
 			</div>
 			<div class="flex justify-center mt-12 mb-24 p-6">
-				<img class="w-96 h-full" src={Logo} alt="" srcset="" />
+				<img class="w-96 h-full" src="https://res.cloudinary.com/dctldwa03/image/upload/q_auto:good/v1678214385/Logo3_qjp3au.png" alt="Francisco Lencina Foto"/>
 			</div>
 		</div>
-		<div class="scrollDownBtn w-full flex justify-center">
+		<div class="scrollDownBtn w-full flex justify-center ">
 			<a
 				class="text-6xl text-[var(--blue)] hover:text-black hover:scale-110 dark:hover:text-white duration-300"
+				aria-label="Scroll Down Button"
 				href="#Habilidades"><i class="ri-arrow-down-s-line"></i></a
 			>
 		</div>
 		<section id="Habilidades" class="mt-36">
-			<div class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-[--blue] dark:opacity-20">
+			<div class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-[--blue] dark:opacity-20 scroll-mx-0">
 				<h4>SKILLS</h4>
 			</div>
 			<Titles title="Habilidades"/>
 			<Habilidades />
 		</section>
 		<section id="Proyectos">
-			<div class="PROJECTS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-[--blue] dark:opacity-20 ">
+			<div class="PROJECTS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-[--blue] dark:opacity-20 scroll-mx-0">
 				<h4>PROJECTS</h4>
 			</div>
 			<Titles title="Proyectos" />
@@ -150,6 +151,8 @@ import Proyectos from "../pages/proyectos.astro";
 	.text-info {
 		font-family: "Space Mono", monospace;
 	}
+
+
 
 	#scrollBtn {
 		display: none;

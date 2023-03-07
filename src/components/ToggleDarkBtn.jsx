@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 function ToggleDarkBtn() {
 
     const [ darkValue, setDarkValue ] = useState(false);
-
+    
     const toggleDarkMode = () => {
         const newValue = !darkValue;
         setDarkValue(newValue);
@@ -26,8 +26,8 @@ function ToggleDarkBtn() {
       }, [darkValue]);
 
   return (
-    <div className=''>
-        <button className='text-2xl hover:text-[var(--blue)] duration-200 ' onClick={toggleDarkMode} >{darkValue ? <i class="ri-moon-line"></i> : <i class="ri-sun-line"></i> }</button>
+    <div>
+        <button className='text-2xl hover:text-[var(--blue)] duration-200' aria-label='Dark Mode Button' onClick={toggleDarkMode} >{darkValue ? <i class="ri-moon-line"></i> : <i class="ri-sun-line"></i> }</button>
     </div>
   )
 }
