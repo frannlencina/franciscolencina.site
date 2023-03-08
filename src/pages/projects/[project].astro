@@ -1,19 +1,36 @@
 ---
-import Layout from "../../layouts/Layout.astro";
+import Post from "../../layouts/Post.astro";
 
 export function getStaticPaths() {
   return [
-    {params: {project: 'SafePvP'}},
+    {params: {project: 'SafePvP', imageUrl: 'https://res.cloudinary.com/dctldwa03/image/upload/q_auto:good/v1678214385/Logo3_qjp3au.png'}},
     {params: {project: 'Keyswh'}},
   ];
 }
 
-const { project } = Astro.params;
+const { project, imageUrl } = Astro.params;
 ---
-<Layout title="Francisco Lencina : Portfolio">
-  <div class="container max-w-3xl	mx-auto flex justify-center">
-    <div class="text-6xl font-black opacity-90">{project}</div>
-    <div class="image"><img src="" alt="" srcset=""></div>
-    <div class="description"></div>
+<Post title="Francisco Lencina : Portfolio">
+  <div>
+    <div class="title">
+      {project}
+    </div>
+    <div class="image">
+      <img src={imageUrl} alt="Portada del Software desarrollado.">
+    </div>
+    <div class="about-project">
+      
+    </div>
+    <div class="technology-specifications">
+      
+    </div>
+    <div class="technology-images">
+
+    </div>
   </div>
-</Layout>
+</Post>
+<script>
+  /*
+  , imageUrl: '', aboutDescription: 'asd', aboutTechnology: 'asd' 
+  */
+</script>

@@ -1,0 +1,54 @@
+---
+import Navbar from '../components/Navbar.astro'
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="Portfolio" content="Author:Francisco Lencina, Category: Portfolio, Blog. Resume: This is my portfolio and i will show you my skills and knowledge.">
+		<meta name="theme-color" content="#317EFB"/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="duration-300">
+		<Navbar></Navbar>
+		<slot />
+	</body>
+</html>
+<style is:global>
+    :root {
+		--blue: #3450A2;
+		--blue-pastel: #5F75B6;
+		--blue-dark: #272D40;
+		--blue-deep: #141825;
+		--black: rgba(46,46,46,1);
+		--blue-white: linear-gradient(90deg, #3450A2 10.77%, #CFCFCF 82.04%, #FFFFFF 97.06%);
+		--white-blue: linear-gradient(270.05deg, #3450A4 -5.55%, #FFFFFF 110.25%);
+		--blue-gradient: linear-gradient(90deg,rgba(52,80,164,1) 0%, rgba(46,46,46,1) 20%, rgba(46,46,46,1) 60%);
+		--black-gradient: linear-gradient(90deg, rgba(46,46,46,1) 0%, rgba(52,80,164,1) 10%, rgba(52,80,164,1) 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+		scroll-behavior: smooth;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+	.dark{
+		background-color: #141825;
+	}
+</style>
+<script>
+
+</script>

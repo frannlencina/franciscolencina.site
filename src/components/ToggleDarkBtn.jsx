@@ -27,7 +27,7 @@ function ToggleDarkBtn() {
 
   return (
     <div>
-        <button className='text-2xl hover:text-[var(--blue)] duration-200' aria-label='Dark Mode Button' onClick={toggleDarkMode} >{darkValue ? <i class="ri-moon-line"></i> : <i class="ri-sun-line"></i> }</button>
+        <button className='text-2xl hover:text-[var(--blue)] duration-200' aria-label='Dark Mode Button' onClick={toggleDarkMode} >{darkValue ? <i class="ri-moon-line hover:text-[var(--blue)]"></i> : <i class="ri-sun-line"></i> }</button>
     </div>
   )
 }
