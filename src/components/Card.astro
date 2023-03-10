@@ -1,64 +1,54 @@
 ---
-
-export interface Props {
-	title: string;
-	body: string;
-	href: string;
-	imageUrl: string;
-	project: string;
-	tech1: string;
-	tech2: string;
-	tech3: string;
-	tech4: string;
-}
-
-const { href, title, body, imageUrl, project, tech1, tech2, tech3, tech4 } = Astro.props;
+const projects = await Astro.glob("../pages/projects/posts/*.md");
 ---
 
-<li class="link-card flex flex-col items-end w-full gap-2 mb-8 dark:bg-[var(--blue-dark)] rounded-lg dark:text-white">
+{
+    projects.map((projects) => (
+    <li class="link-card flex flex-col items-end w-full gap-2 mb-8 dark:bg-[var(--blue-dark)] rounded-lg dark:text-white">
 	<div class="flex flex-col sm:flex-row">
 		<div class="Image flex justify-center items-center w-1/2 m-4">
-			<img class="rounded-md" src={imageUrl} alt="" srcset="" />
+			<img class="rounded-md" src={projects.frontmatter.image} alt="" srcset="" />
 		</div>
 		<div id="Body" class="m-4 flex flex-col justify-around">
 			<div>
 				<h2 class="md:text-2xl font-black opacity-80 dark:text-white dark:opacity-100">
-					{title}
+					{projects.frontmatter.title}
 				</h2>
 			</div>
 			<div class="">
 				<p class="max-w-sm break-all md:text-lg dark:text-white dark:opacity-80">
-					{body}
+					{projects.frontmatter.description}
 				</p>
 			</div>
 			<div class="footer w-full flex">
 				<div id="imagenes" class="w-full items-center">
+					
 					<img
 						class="tech hover:scale-105 duration-300 cursor-pointer h-8"
-						src={tech1}
+						src={projects.frontmatter.tech1}
 						alt="Tecnologia Nm1"
 					/>
 					<img
 						class="tech hover:scale-105 duration-300 cursor-pointer h-8"
-						src={tech2}
+						src={projects.frontmatter.tech2}
 						alt="Tecnologia Nm2"
 					/>
 					<img
 						class="tech hover:scale-105 duration-300 cursor-pointer h-8"
-						src={tech3}
+						src={projects.frontmatter.tech3}
 						alt="Tecnologia Nm3"
 					/>
 					<img
-						class="tech hover:scale-105 duration-300 cursor-pointer h-8 "
-						src={tech4}
-						alt="Tecnologia Nm4"
+						class="tech hover:scale-105 duration-300 cursor-pointer h-8"
+						src={projects.frontmatter.tech4}
+						alt="Tecnologia Nm3"
 					/>
 				</div>
 				<div class="w-1/2">
 					<div>
 						<div
 							class="flex text-center justify-center p-2 bg-[var(--blue)] dark:bg-[var(--blue-deep)] rounded-md text-white hover:text-blue-400 duration-300 cursor-pointer">
-							<a class="flex" href={`/projects/`+project} >Detalles<i class="ri-arrow-right-line"></i></a>
+							<a class="flex" href={projects.url} >Detalles<i class="ri-arrow-right-line"></i></a>
 						</div>
 					</div>
 				</div>
@@ -66,8 +56,10 @@ const { href, title, body, imageUrl, project, tech1, tech2, tech3, tech4 } = Ast
 		</div>
 	</div>
 </li>
+    ))
+}
 <style>
-	#imagenes {
+    #imagenes {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
 	}
@@ -104,3 +96,8 @@ const { href, title, body, imageUrl, project, tech1, tech2, tech3, tech4 } = Ast
 		color: #444;
 	}
 </style>
+<script>
+    /* 
+    <a href={projects.url}>{projects.frontmatter.title}</a>
+    */
+</script>

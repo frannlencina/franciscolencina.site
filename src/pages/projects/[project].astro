@@ -1,22 +1,14 @@
 ---
 import Post from "../../layouts/Post.astro";
 
-export function getStaticPaths() {
-  return [
-    {params: {project: 'SafePvP', imageUrl: 'https://res.cloudinary.com/dctldwa03/image/upload/q_auto:good/v1678214385/Logo3_qjp3au.png'}},
-    {params: {project: 'Keyswh'}},
-  ];
-}
-
-const { project, imageUrl } = Astro.params;
 ---
 <Post title="Francisco Lencina : Portfolio">
   <div>
     <div class="title">
-      {project}
+     
     </div>
     <div class="image">
-      <img src={imageUrl} alt="Portada del Software desarrollado.">
+      <img src="" alt="">
     </div>
     <div class="about-project">
       
@@ -31,6 +23,13 @@ const { project, imageUrl } = Astro.params;
 </Post>
 <script>
   /*
+  export function getStaticPaths() {
+  return [
+    {params: {project: 'SafePvP'}},
+    {params: {project: 'Keyswh'}},
+  ];
+}
+
   , imageUrl: '', aboutDescription: 'asd', aboutTechnology: 'asd' 
   */
 </script>
