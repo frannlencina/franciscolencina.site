@@ -11,12 +11,12 @@ const projects = await Astro.glob("../pages/projects/posts/*.md");
 		</div>
 		<div id="Body" class="m-4 flex flex-col justify-around">
 			<div>
-				<h2 class="md:text-2xl font-black opacity-80 dark:text-white dark:opacity-100">
+				<h2 class="text-start md:text-2xl font-black opacity-80 dark:text-white dark:opacity-100">
 					{projects.frontmatter.title}
 				</h2>
 			</div>
 			<div class="">
-				<p class="max-w-sm break-all md:text-lg dark:text-white dark:opacity-80">
+				<p class="text-start max-w-sm break-all md:text-lg dark:text-white dark:opacity-80">
 					{projects.frontmatter.description}
 				</p>
 			</div>

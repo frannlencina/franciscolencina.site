@@ -1,5 +1,5 @@
 ---
-layout: ../../../layouts/LayoutPost.astro
+layout: ../../../layouts/Post.astro
 title: SafePvP
 description: SafePvP es la pagina oficial sobre un ex servidor de un videojuego.
 image: https://res.cloudinary.com/dctldwa03/image/upload/q_auto:low/v1678214894/safepvp_foto_pfl1he.png
