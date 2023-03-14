@@ -1,0 +1,39 @@
+---
+import Post from "../../layouts/Post.astro"
+
+import jsonData from '../../storage/projects.json'
+
+const pages = [
+    {
+        slug: undefined,
+        title: "Astro Store",
+        text: "Welcome to the Astro store!",
+    },
+    {
+        slug: "SafePvP",
+        title: `${jsonData[1].title}`,
+        description: `${jsonData[1].description}`,
+        image: `${jsonData[1].image}`,
+    },
+    {
+        slug: "Keyswh",
+        title: `${jsonData[0].title}`,
+        description: `${jsonData[0].description}`,
+        image: `${jsonData[0].image}`,
+    },
+];
+
+const { slug } = Astro.params;
+const page = pages.find((page) => page.slug === slug);
+if (!page) return Astro.redirect("/404");
+const {  title, description, image } = page;
+
+---
+
+<Post title="Francisco Lencina : Portfolio">
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <img src={image} alt="Imgen del proyecto">
+</Post>
+<style>
+</style>

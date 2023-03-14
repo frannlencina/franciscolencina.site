@@ -48,7 +48,7 @@ const projects = await Astro.glob("../pages/projects/posts/*.md");
 					<div>
 						<div
 							class="flex text-center justify-center p-2 bg-[var(--blue)] dark:bg-[var(--blue-deep)] rounded-md text-white hover:text-blue-400 duration-300 cursor-pointer">
-							<a class="flex" href={projects.url} >Detalles<i class="ri-arrow-right-line"></i></a>
+							<a class="flex" href={projects.frontmatter.url} >Detalles<i class="ri-arrow-right-line"></i></a>
 						</div>
 					</div>
 				</div>

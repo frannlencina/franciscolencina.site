@@ -1,0 +1,16 @@
+[
+{
+    "slug": "Keyswh",
+    "id": 1,
+    "title": "Keyswh",
+    "description": "Keyswh es una comunidad de teclados mecanicos, donde podras ver guias, noticias e informarte sobre estos.",
+    "image": "https://res.cloudinary.com/dctldwa03/image/upload/q_auto:low/v1678214893/keyswh_foto_a4ce8c.png"
+},
+{
+    "slug": "SafePvP",
+    "id": 2,
+    "title": "SafePvP",
+    "description": "SafePvP es una comunidad de teclados mecanicos, donde podras ver guias, noticias e informarte sobre estos.",
+    "image": "https://res.cloudinary.com/dctldwa03/image/upload/q_auto:eco/v1678214894/safepvp_foto_pfl1he.png"
+}
+]

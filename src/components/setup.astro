@@ -1,0 +1,8 @@
+---
+import setup from '../storage/projects.json'
+import SetupLayout from '../pages/projects/[...slug].astro';
+const title = 'test';
+
+const dataa = await Astro.glob('../storage/*.json');
+---
+<SetupLayout data={dataa} titlee={title}></SetupLayout>
