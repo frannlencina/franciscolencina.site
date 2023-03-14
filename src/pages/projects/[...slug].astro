@@ -14,12 +14,12 @@ const pages = [
         title: `${jsonData[1].title}`,
         description: `${jsonData[1].description}`,
         image: `${jsonData[1].image}`,
-        about: `${jsonData[0].about}`,
-        techSpecs: `${jsonData[0].techSpecs}`,
-        tech1: `${jsonData[0].tech1}`,
-        tech2: `${jsonData[0].tech2}`,
-        tech3: `${jsonData[0].tech3}`,
-        tech4: `${jsonData[0].tech4}`,
+        about: `${jsonData[1].about}`,
+        techSpecs: `${jsonData[1].techSpecs}`,
+        tech1: `${jsonData[1].tech1}`,
+        tech2: `${jsonData[1].tech2}`,
+        tech3: `${jsonData[1].tech3}`,
+        tech4: `${jsonData[1].tech4}`,
     },
     {
         slug: "Keyswh",
@@ -47,14 +47,14 @@ const { title, description, image, about, techSpecs, tech1, tech2, tech3, tech4 
         <img class="mx-auto rounded-lg w-5/6 mt-8" src={image} alt="Imgen del proyecto" />
     </div>
     <div class="p-10 mx-auto max-w-2xl">
-        <h2 class="text-center font-bold text-4xl">About the Project</h2>
-        <p class="text-center">{about}</p>
+        <h2 class="text-center font-bold text-4xl">Sobre el Proyecto</h2>
+        <p class="text-center p-6">{about}</p>
     </div>
     <div class="p-10 mx-auto max-w-2xl">
-        <h2 class="text-center font-bold text-4xl">
-            Technology Specifications
+        <h2 class="text-center font-bold text-4xl ">
+            Tecnologias
         </h2>
-        <p class="text-center">{techSpecs}</p>
+        <p class="text-center p-6">{techSpecs}</p>
     </div>
     <div class="flex justify-center items-center gap-6 pt-8 pb-12">
         <img class="flex w-12 h-full" src={tech1} alt="">
