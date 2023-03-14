@@ -15,7 +15,11 @@ import Proyectos from "../pages/proyectos.astro";
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
-	
+	<button
+		class="fixed text-white bg-black hover:bg-[var(--blue)] p-3 text-lg right-4 sm:right-20 lg:right-82 bottom-16 z-20 border-none hover:duration-300 cursor-pointer outline-none border rounded-md
+		dark:text-black dark:bg-white dark:hover:bg-[var(--blue)] "
+		id="scrollBtn"
+		title="Scroll to top"><i class="ri-arrow-up-line"></i></button>
 	<SocialLine />
 	<div class="container max-w-5xl m-0 mx-auto p-6 ">
 		<div class="PROFILE hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 overscroll-x-none">
@@ -157,5 +161,26 @@ import Proyectos from "../pages/proyectos.astro";
 </style>
 
 <script>
-
+	let scrollBtn = document.getElementById("scrollBtn");
+	// 20px from the top show the button
+	window.onscroll = function () {
+		scrollFunction();
+	};
+	scrollBtn.addEventListener("click", () => {
+		topFunction();
+	});
+	function scrollFunction() {
+		if (
+			document.body.scrollTop > 20 ||
+			document.documentElement.scrollTop > 20
+		) {
+			scrollBtn.style.display = "block";
+		} else {
+			scrollBtn.style.display = "none";
+		}
+	}
+	function topFunction() {
+		document.body.scrollTop = 0; // For Safari
+		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
 </script>
