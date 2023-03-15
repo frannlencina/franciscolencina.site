@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Curriculum from '/curriculum.pdf'
+import Curriculum from '/francisco-lencina-curriculum.pdf'
 
 function DvButton() {
     return (
