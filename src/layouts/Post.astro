@@ -18,11 +18,25 @@ const { title } = Astro.props;
 			content="Author:Francisco Lencina, Category: Portfolio, Blog. Resume: This is my portfolio and i will show you my skills and knowledge."
 		/>
 		<meta name="theme-color" content="#317EFB" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png"/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
 			rel="stylesheet"
 		/>
+		<!-- Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-VMWZH9EN3H"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-VMWZH9EN3H");
+		</script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -67,7 +81,7 @@ const { title } = Astro.props;
 	html {
 		font-family: system-ui, sans-serif;
 		scroll-behavior: smooth;
-		background-color: #F6F6F6;
+		background-color: #f6f6f6;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
@@ -77,6 +91,4 @@ const { title } = Astro.props;
 		background-color: #141825;
 	}
 </style>
-<script>
-	
-</script>
+<script></script>
