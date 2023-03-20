@@ -15,7 +15,7 @@ const projects = await Astro.glob("../pages/projects/posts/*.md");
 		</div>
 		<div id="Body" class="m-4 flex flex-col justify-around">
 			<div class="flex items-center">
-				<a href={projects.frontmatter.website} class="text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 cursor-pointer dark:text-white dark:opacity-100">
+				<a href={projects.frontmatter.website} class="text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 cursor-pointer dark:text-white dark:opacity-100" target="__blank">
 					{projects.frontmatter.title}
 					<i class="ri-link relative top-1"></i>
 				</a>
