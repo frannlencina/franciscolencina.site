@@ -1,8 +1,28 @@
 ---
-import Card from "../components/Card.astro";
+import Card from '../components/Card'
+
+import Data from '../storage/projects.json'
+
 ---
 <div class="md:py-24 ">
 <ul role="list" class="link-card-grid flex flex-col gap-4 items-center sm:max-w-xl sm:mx-auto md:max-w-3xl ">
-    <Card/>
+    
+   {
+     Data.map(item => (
+    <Card
+      slug={item.slug}
+      title={item.title}
+      description={item.description}
+      about={item.about}
+      techSpecs={item.techSpecs}
+      image={item.image}
+      website={item.website}
+      tech1={item.tech1}
+      tech2={item.tech2}
+      tech3={item.tech3}
+      tech4={item.tech4}
+    />
+  ))
+   }
 </ul>
 </div>
