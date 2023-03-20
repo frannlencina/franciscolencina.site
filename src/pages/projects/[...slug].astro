@@ -16,6 +16,7 @@ const pages = [
         image: `${jsonData[1].image}`,
         about: `${jsonData[1].about}`,
         techSpecs: `${jsonData[1].techSpecs}`,
+        website: `${jsonData[1].website}`,
         tech1: `${jsonData[1].tech1}`,
         tech2: `${jsonData[1].tech2}`,
         tech3: `${jsonData[1].tech3}`,
@@ -28,6 +29,7 @@ const pages = [
         image: `${jsonData[0].image}`,
         about: `${jsonData[0].about}`,
         techSpecs: `${jsonData[0].techSpecs}`,
+        website: `${jsonData[0].website}`,
         tech1: `${jsonData[0].tech1}`,
         tech2: `${jsonData[0].tech2}`,
         tech3: `${jsonData[0].tech3}`,
@@ -38,13 +40,16 @@ const pages = [
 const { slug } = Astro.params;
 const page = pages.find((page) => page.slug === slug);
 if (!page) return Astro.redirect("/404");
-const { title, description, image, about, techSpecs, tech1, tech2, tech3, tech4 } = page;
+const { title, description, image, about, techSpecs, website, tech1, tech2, tech3, tech4 } = page;
 ---
 
 <Post title="Francisco Lencina : Portfolio">
     <div class="">
         <h1 class="text-center font-bold text-6xl pt-12">{title}</h1>
         <img class="mx-auto rounded-lg w-5/6 mt-8" src={image} alt="Imgen del proyecto" />
+        <div class="flex justify-center items-center">
+        <a class="mt-4 px-3 py-2 rounded font-medium text-white bg-[var(--blue)] dark:text-[var(--blue-pastel)] dark:bg-[var(--blue-dark)] dark:hover:bg-[var(--blue)] dark:hover:text-white hover:text-[var(--blue-pastel)] hover:bg-[var(--blue-dark)] hover:px-6 transition-all duration-200" href={website} target="__blank" >Ver Demo</a>
+    </div>
     </div>
     <div class="p-10 mx-auto max-w-2xl">
         <h2 class="text-center font-bold text-4xl">Sobre el Proyecto</h2>

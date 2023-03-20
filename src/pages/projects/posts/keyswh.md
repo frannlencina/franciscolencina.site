@@ -4,6 +4,8 @@ title: Keyswh
 description: Keyswh es una comunidad de teclados mecanicos, donde podras ver guias, noticias e informarte sobre estos.
 image: https://res.cloudinary.com/dctldwa03/image/upload/q_auto:low/v1678214893/keyswh_foto_a4ce8c.png
 
+website: 
+
 url: /projects/Keyswh
 
 tech1: https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/javascript-logo_drsvuc.png

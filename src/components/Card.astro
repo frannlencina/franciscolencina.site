@@ -1,5 +1,7 @@
 ---
 const projects = await Astro.glob("../pages/projects/posts/*.md");
+
+
 ---
 
 {
@@ -7,13 +9,16 @@ const projects = await Astro.glob("../pages/projects/posts/*.md");
     <li class="link-card flex flex-col items-end w-full gap-2 mb-8 dark:bg-[var(--blue-dark)] rounded-lg dark:text-white">
 	<div class="flex flex-col sm:flex-row">
 		<div class="Image flex justify-center items-center w-1/2 m-4">
-			<img class="rounded-md" src={projects.frontmatter.image} alt="" srcset="" />
+			<a href={projects.frontmatter.website} target="__blank" class="cursor-pointer">
+				<img class="rounded-md hover:opacity-60" src={projects.frontmatter.image} alt="" srcset="" />
+			</a>
 		</div>
 		<div id="Body" class="m-4 flex flex-col justify-around">
-			<div>
-				<h2 class="text-start md:text-2xl font-black opacity-80 dark:text-white dark:opacity-100">
+			<div class="flex items-center">
+				<a href={projects.frontmatter.website} class="text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 cursor-pointer dark:text-white dark:opacity-100">
 					{projects.frontmatter.title}
-				</h2>
+					<i class="ri-link relative top-1"></i>
+				</a>
 			</div>
 			<div class="">
 				<p class="text-start max-w-sm break-all md:text-lg dark:text-white dark:opacity-80">
