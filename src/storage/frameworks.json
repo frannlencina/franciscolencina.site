@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "ViteJs",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/vitejs-logo_fl5rei.png"
+    },
+    {
+        "id": 2,
+        "name": "TailwindCSS",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/tailwindcss-logo_wjbz44.png"
+    },
+    {
+        "id": 3,
+        "name": "Bootstrap",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214384/bootstrap-logo_l3jem4.png"
+    },
+    {
+        "id": 4,
+        "name": "Express",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/q_auto:eco/v1678214384/express-logo_u7ye0s.png"
+    },
+    {
+        "id": 5,
+        "name": "Astro",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214384/astrojs_xqbyuy.svg"
+    }
+]

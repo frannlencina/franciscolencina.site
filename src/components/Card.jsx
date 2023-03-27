@@ -17,29 +17,29 @@ function Card(props) {
 				</a>
 			</div>
 			<div className="">
-				<p className="text-start max-w-md break-all md:text-lg font-mono dark:text-white dark:opacity-80">
+				<p className="text-start max-w-md break-normal md:text-lg font-mono dark:text-white dark:opacity-80">
 					{props.description}
 				</p>
 			</div>
 			<div className="footer w-full flex">
 				<div id="imagenes" className="flex gap-3 w-full items-center">
 					<img
-						class="tech hover:scale-105 duration-300 cursor-pointer h-8"
+						class="tech hover:scale-105 duration-300 h-8"
 						src={props.tech1}
 						alt="Tecnologia Nm1"
 					/>
 					<img
-						class="tech hover:scale-105 duration-300 cursor-pointer h-8"
+						class="tech hover:scale-105 duration-300 h-8"
 						src={props.tech2}
 						alt="Tecnologia Nm2"
 					/>
 					<img
-						class="tech hover:scale-105 duration-300 cursor-pointer h-8"
+						class="tech hover:scale-105 duration-300 h-8"
 						src={props.tech3}
 						alt="Tecnologia Nm3"
 					/>
 					<img
-						class="tech hover:scale-105 duration-300 cursor-pointer h-8"
+						class="tech hover:scale-105 duration-300 h-8"
 						src={props.tech4}
 						alt="Tecnologia Nm3"
 					/>

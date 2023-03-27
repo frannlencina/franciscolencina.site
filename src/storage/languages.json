@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "HTML",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png"
+    },
+    {
+        "id": 2,
+        "name": "CSS",
+        "image": "https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-css-logo-png-transparent-svg-vector-bie-supply-9.png"
+    },
+    {
+        "id": 3,
+        "name": "JavaScript",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/javascript-logo_drsvuc.png"
+    },
+    {
+        "id": 4,
+        "name": "ReactJs",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/reactjs-logo_kqlp9a.png"
+    },
+    {
+        "id": 5,
+        "name": "NodeJs",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/nodejs-logo_m4lwq7.png"
+    },
+    {
+        "id": 6,
+        "name": "MongoDb",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/mongodb-logo_qowzyr.png"
+    }
+    ]
