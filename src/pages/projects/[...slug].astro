@@ -3,39 +3,7 @@ import Post from "../../layouts/Post.astro";
 
 import jsonData from "../../storage/projects.json";
 
-const pages = [
-    {
-        slug: undefined,
-        title: "Astro Store",
-        text: "Welcome to the Astro store!",
-    },
-    {
-        slug: "SafePvP",
-        title: `${jsonData[1].title}`,
-        description: `${jsonData[1].description}`,
-        image: `${jsonData[1].image}`,
-        about: `${jsonData[1].about}`,
-        techSpecs: `${jsonData[1].techSpecs}`,
-        website: `${jsonData[1].website}`,
-        tech1: `${jsonData[1].tech1}`,
-        tech2: `${jsonData[1].tech2}`,
-        tech3: `${jsonData[1].tech3}`,
-        tech4: `${jsonData[1].tech4}`,
-    },
-    {
-        slug: "Keyswh",
-        title: `${jsonData[0].title}`,
-        description: `${jsonData[0].description}`,
-        image: `${jsonData[0].image}`,
-        about: `${jsonData[0].about}`,
-        techSpecs: `${jsonData[0].techSpecs}`,
-        website: `${jsonData[0].website}`,
-        tech1: `${jsonData[0].tech1}`,
-        tech2: `${jsonData[0].tech2}`,
-        tech3: `${jsonData[0].tech3}`,
-        tech4: `${jsonData[0].tech4}`,
-    },
-];
+const pages = jsonData;
 
 const { slug } = Astro.params;
 const page = pages.find((page) => page.slug === slug);
