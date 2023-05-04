@@ -1,8 +1,9 @@
 ---
+import ImageTooltip from "../components/ImageTooltip";
 import Frameworks from "../storage/frameworks.json";
 import Languages from "../storage/languages.json";
 
-import 'tippy.js/dist/tippy.cjs';
+import "tippy.js/dist/tippy.cjs";
 ---
 
 <div class="flex flex-col gap-12">
@@ -16,11 +17,17 @@ import 'tippy.js/dist/tippy.cjs';
             </p>
         </div>
         <div class="m-5">
-            <ul class="max-w-2xl flex flex-col gap-4 md:flex-row">
+            <ul
+                class="max-w-2xl justify-items-center items-center grid gap-12 grid-cols-2 md:gap-3 md:grid-cols-6"
+            >
                 {
                     Languages.map((item) => (
-                        <li class="flex flex-col w-16 justify-center items-center gap-4 md:flex-row md:w-full md:gap-8">
-                            <img class="hover:scale-105 duration-300 cursor-default" src={item.image} alt={item.name}/>
+                    <li class="inline-block">
+                            <ImageTooltip
+                                image={item.image}
+                                name={item.name}
+                                client:load
+                            />
                         </li>
                     ))
                 }
@@ -38,11 +45,17 @@ import 'tippy.js/dist/tippy.cjs';
             </p>
         </div>
         <div class="m-5 h-auto">
-            <ul class="max-w-2xl flex flex-col md:flex-row">
+            <ul
+                class="max-w-2xl grid grid-flow-dense justify-items-center items-center gap-12 md:gap-3 grid-cols-2 md:grid-cols-6"
+            >
                 {
                     Frameworks.map((item) => (
-                        <li class="flex flex-col w-16 justify-center items-center gap-4 md:flex-row md:w-full md:gap-8 ">
-                            <img class="hover:scale-105 duration-300 cursor-default" src={item.image} alt={item.name}/>
+                        <li class="inline-block">
+                            <ImageTooltip
+                                image={item.image}
+                                name={item.name}
+                                client:load
+                            />
                         </li>
                     ))
                 }
@@ -55,15 +68,4 @@ import 'tippy.js/dist/tippy.cjs';
         font-family: monospace;
     }
 
-    img {
-        height: 72px;
-        cursor: pointer;
-    }
-
-    @media (max-width: 767px) {
-        img {
-            width: fit-content;
-            height: 64px;
-        }
-    }
 </style>

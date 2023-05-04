@@ -11,9 +11,9 @@ function Card(props) {
 		</div>
 		<div id="Body" className="m-4 flex flex-col justify-around">
 			<div className="flex items-center">
-				<a href={props.website} className="text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 cursor-pointer dark:text-white dark:opacity-100" target="__blank">
+				<a href={props.website} className="flex gap-1 text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 cursor-pointer dark:text-white dark:opacity-100" target="__blank">
 					{props.title}
-					<i className="ri-link relative top-1"></i>
+					<i class=" ri-external-link-line"></i>
 				</a>
 			</div>
 			<div className="">
@@ -24,22 +24,22 @@ function Card(props) {
 			<div className="footer w-full flex">
 				<div id="imagenes" className="flex gap-3 w-full items-center">
 					<img
-						class="tech hover:scale-105 duration-300 h-8"
+						className="tech hover:scale-105 duration-300 h-8"
 						src={props.tech1}
 						alt="Tecnologia Nm1"
 					/>
 					<img
-						class="tech hover:scale-105 duration-300 h-8"
+						className="tech hover:scale-105 duration-300 h-8"
 						src={props.tech2}
 						alt="Tecnologia Nm2"
 					/>
 					<img
-						class="tech hover:scale-105 duration-300 h-8"
+						className="tech hover:scale-105 duration-300 h-8"
 						src={props.tech3}
 						alt="Tecnologia Nm3"
 					/>
 					<img
-						class="tech hover:scale-105 duration-300 h-8"
+						className="tech hover:scale-105 duration-300 h-8"
 						src={props.tech4}
 						alt="Tecnologia Nm3"
 					/>
@@ -47,8 +47,8 @@ function Card(props) {
 				<div className="w-1/2">
 					<div>
 						<div
-							className="flex text-center justify-center p-2 bg-[var(--blue)] dark:bg-[var(--blue-deep)] rounded-md text-white hover:text-blue-400 duration-300 cursor-pointer">
-							<a className="flex" href={`/projects/`+props.slug} >Detalles<i className="ri-arrow-right-line"></i></a>
+							className="flex text-center justify-center font-medium p-2 bg-[var(--blue)] text-white dark:bg-[var(--blue-deep)] rounded-md hover:bg-gray-800 cursor-pointer">
+							<a className="flex" href={`/projects/`+props.slug} >Detalles<i className="ri-arrow-right-line ml-1"></i></a>
 						</div>
 					</div>
 				</div>
