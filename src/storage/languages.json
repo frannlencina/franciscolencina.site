@@ -12,21 +12,21 @@
     {
         "id": 3,
         "name": "JavaScript",
-        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/javascript-logo_drsvuc.png"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png"
     },
     {
         "id": 4,
         "name": "ReactJs",
-        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/reactjs-logo_kqlp9a.png"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
     },
     {
         "id": 5,
         "name": "NodeJs",
-        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/nodejs-logo_m4lwq7.png"
+        "image": "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
     },
     {
         "id": 6,
         "name": "MongoDb",
-        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/mongodb-logo_qowzyr.png"
+        "image": "https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png"
     }
     ]
