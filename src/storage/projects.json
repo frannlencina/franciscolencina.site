@@ -3,7 +3,7 @@
     "slug": "SafePvP",
     "id": 1,
     "title": "SafePvP",
-    "about": "SafePvP fue la pagina oficial de un exitoso servidor de el videojuego Minecraft. Donde los usuarios podian entrar a dicha pagina, copiar la ip ver la cantidad de jugadores online a tiempo real, ver las reglas o dirigirse a la tienda del servidor. Tambien habian secciones donde se mostraban las modalidades actuales de la temporada e informarse sobre estas.",
+    "about": "SafePvP fue la pagina oficial de un exitoso servidor de el videojuego Minecraft. Donde los usuarios podian entrar a dicha pagina, copiar la ip, ver la cantidad de jugadores online a tiempo real, ver las reglas o simplemente dirigirse a la tienda del servidor. Tambien habian secciones donde se mostraban las modalidades actuales de la temporada e informarse sobre estas.",
     "techSpecs": "La pagina fue creada con React Js como Framework de JS, con Tailwind CSS como Framework de CSS,y con herramienta de compilacion ViteJS. Fue planteada, diseñada y estructurada antes de dicho desarrollo en Figma. La pagina tambien trabajaba con una API donde se extraian los datos para ver a tiempo real la cantidad de jugadores online.",
     "description": "SafePvP es la pagina oficial sobre un ex servidor de un videojuego.",
     "website": "https://safepvp.000webhostapp.com/",

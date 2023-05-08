@@ -13,10 +13,10 @@ function Card(props) {
 			<div className="flex items-center">
 				<a href={props.website} className="flex gap-1 text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 cursor-pointer dark:text-white dark:opacity-100" target="__blank">
 					{props.title}
-					<i class=" ri-external-link-line"></i>
+					<i class="ri-external-link-line"></i>
 				</a>
 			</div>
-			<div className="">
+			<div>
 				<p className="text-start max-w-md break-normal md:text-lg font-mono dark:text-white dark:opacity-80">
 					{props.description}
 				</p>
