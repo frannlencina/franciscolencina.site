@@ -2,6 +2,7 @@
 import Post from "../../layouts/Post.astro";
 import Footer from "../../components/Footer.astro";
 import jsonData from "../../storage/projects.json";
+import Slider from "../../components/Slider";
 
 const pages = jsonData;
 
@@ -15,25 +16,23 @@ const {
     about,
     techSpecs,
     website,
-    tech1,
-    tech2,
-    tech3,
-    tech4,
+    screens,
+    tech,
 } = page;
 ---
 
-<Post title='Francisco Lencina : Project' description={description} image={image}>
+<Post
+    title="Francisco Lencina : Project"
+    description={description}
+    image={image}
+>
     <div class="">
         <h1
             class="text-center font-bold text-6xl pt-12 text-[#3450A2] dark:text-[#3450A2]"
         >
             {title}
         </h1>
-        <img
-            class="mx-auto rounded-lg w-5/6 mt-8"
-            src={image}
-            alt="Imgen del proyecto"
-        />
+        <Slider screens={screens} client:load />
     </div>
     <div class="flex mx-auto max-w-2xl justify-between items-center px-5">
         <a
@@ -62,7 +61,9 @@ const {
     >
         Sobre el Proyecto
     </h2>
-    <p class="text-start p-6 text-xl sm:text-2xl opacity-80">{about}</p>
+    <p class="text-start p-6 text-xl sm:text-2xl dark:text-white opacity-80">
+        {about}
+    </p>
 </div>
 <div class="p-10 mx-auto max-w-3xl text-start">
     <!--  <Titles title="Tecnologias"/> -->
@@ -71,13 +72,12 @@ const {
     >
         Tecnologias
     </h2>
-    <p class="text-start text-xl sm:text-2xl p-6 opacity-80">{techSpecs}</p>
+    <p class="text-start text-xl sm:text-2xl dark:text-white p-6 opacity-80">
+        {techSpecs}
+    </p>
 </div>
 <div class="flex justify-center items-center gap-6 pt-8 pb-12">
-    <img class="flex w-12 h-full hover:scale-110" src={tech1} alt="" />
-    <img class="flex w-12 h-full hover:scale-110" src={tech2} alt="" />
-    <img class="flex w-12 h-full hover:scale-110" src={tech3} alt="" />
-    <img class="flex w-12 h-full hover:scale-110" src={tech4} alt="" />
+    {tech.map((url) => <img class="mt-8 mx-2 h-12" src={url} alt="Tecnologia utilizada." />)}
 </div>
 <Footer />
 

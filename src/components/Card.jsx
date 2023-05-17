@@ -9,7 +9,7 @@ function Card(props) {
 				<img className="rounded-md hover:opacity-60" src={props.image} alt="Projects Preview Image"/>
 			</a>
 		</div>
-		<div id="Body" className="m-4 flex flex-col justify-around">
+		<div id="Body" className="m-4 flex flex-col gap-y-4 sm:gap-y-0 justify-around">
 			<div className="flex items-center">
 				<a href={props.website} className="flex gap-1 text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 cursor-pointer dark:text-white dark:opacity-100" target="__blank">
 					{props.title}
@@ -21,34 +21,17 @@ function Card(props) {
 					{props.description}
 				</p>
 			</div>
-			<div className="footer w-full flex">
+			<div className="footer w-full flex flex-col sm:flex-row sm:gap-0 gap-4">
 				<div id="imagenes" className="flex gap-3 w-full items-center">
-					<img
-						className="tech hover:scale-105 duration-300 h-8"
-						src={props.tech1}
-						alt="Tecnologia Nm1"
-					/>
-					<img
-						className="tech hover:scale-105 duration-300 h-8"
-						src={props.tech2}
-						alt="Tecnologia Nm2"
-					/>
-					<img
-						className="tech hover:scale-105 duration-300 h-8"
-						src={props.tech3}
-						alt="Tecnologia Nm3"
-					/>
-					<img
-						className="tech hover:scale-105 duration-300 h-8"
-						src={props.tech4}
-						alt="Tecnologia Nm3"
-					/>
+
+				{props.tech.map((url) => <img className='tech hover:scale-105 duration-300 h-8' src={url} alt="Tecnologia utilizada." />)}
+
 				</div>
-				<div className="w-1/2">
+				<div className="">
 					<div>
 						<div
-							className="flex text-center justify-center font-medium p-2 bg-[var(--blue)] text-white dark:bg-[var(--blue-deep)] rounded-md hover:bg-gray-800 cursor-pointer">
-							<a className="flex" href={`/projects/`+props.slug} >Detalles<i className="ri-arrow-right-line ml-1"></i></a>
+							className="flex text-center justify-center font-medium bg-[var(--blue)] text-white dark:bg-[var(--blue-deep)] dark:hover:bg-[var(--blue)] rounded-md hover:bg-gray-800 cursor-pointer">
+							<a className="flex py-2 px-6" href={`/projects/`+props.slug} >Detalles<i className="ri-arrow-right-line ml-1"></i></a>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,40 @@
+:root {
+    --blue: #3450A2;
+    --swiper-navigation-size: 25px;
+}
+
+.swiper{
+    border-radius: 10px;
+    user-select: none;
+}
+
+.swiper-pagination-bullet-active{
+    background: var(--blue);
+}
+
+.swiper-button-next{
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.swiper-button-next:hover{
+   opacity: 50%;
+}
+
+.swiper-button-prev{
+    color: var(--blue);
+    font-weight: 800;
+}
+
+.swiper-button-prev:hover{
+    opacity: 50%;
+ }
+
+@media only screen and (max-width: 640px) {
+    .swiper-button-next{
+        display: none;
+    }
+    .swiper-button-prev{
+        display: none;
+    }
+  }
