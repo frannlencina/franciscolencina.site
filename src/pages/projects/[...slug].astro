@@ -1,57 +1,91 @@
 ---
 import Post from "../../layouts/Post.astro";
-import Footer from '../../components/Footer.astro'
+import Footer from "../../components/Footer.astro";
 import jsonData from "../../storage/projects.json";
-import Titles from '../../components/Titles.astro'
 
 const pages = jsonData;
 
 const { slug } = Astro.params;
 const page = pages.find((page) => page.slug === slug);
 if (!page) return Astro.redirect("/404");
-const { title, description, image, about, techSpecs, website, tech1, tech2, tech3, tech4 } = page;
+const {
+    title,
+    description,
+    image,
+    about,
+    techSpecs,
+    website,
+    tech1,
+    tech2,
+    tech3,
+    tech4,
+} = page;
 ---
 
 <Post title="Francisco Lencina : Portfolio">
     <div class="">
-        <h1 class="text-center font-bold text-6xl pt-12 text-[#3450A2] dark:text-[#3450A2]">{title}</h1>
-        <img class="mx-auto rounded-lg w-5/6 mt-8" src={image} alt="Imgen del proyecto" />
+        <h1
+            class="text-center font-bold text-6xl pt-12 text-[#3450A2] dark:text-[#3450A2]"
+        >
+            {title}
+        </h1>
+        <img
+            class="mx-auto rounded-lg w-5/6 mt-8"
+            src={image}
+            alt="Imgen del proyecto"
+        />
     </div>
     <div class="flex mx-auto max-w-2xl justify-between items-center px-5">
+        <a
+            class="flex gap-4 mt-4 py-2 rounded font-medium text-lg text-black dark:text-white hover:translate-x-[-8px] transition-all duration-200 dark:hover:translate-x-[-8px] opacity-80 hover:opacity-100"
+            href="/"
+        >
+            <i class="ri-arrow-left-line"></i> Volver al inicio</a
+        >
 
-        <a class="flex gap-4 mt-4 py-2 rounded font-medium text-lg text-black dark:text-white hover:translate-x-[-8px] transition-all duration-200 dark:hover:translate-x-[-8px] opacity-80 hover:opacity-100" href='/' > <i class="ri-arrow-left-line"></i> Volver al inicio</a>
-
-        <a class="flex gap-2 mt-4 px-5 py-2 font-medium text-black text-[var(--blue-dark)] rounded-md transition-all duration-200 opacity-70 hover:translate-x-[8px] hover:opacity-100 dark:text-white" href={website} 
-        
-        target="__blank" > 
-
-            <i class="ri-movie-line dark:text-white"></i> 
-            <span class="inline-block h-[2]  min-h-[1em] w-0.5 self-stretch bg-[var(--blue-dark)]">
+        <a
+            class="flex gap-2 mt-4 px-5 py-2 font-medium text-black text-[var(--blue-dark)] rounded-md transition-all duration-200 opacity-70 hover:translate-x-[8px] hover:opacity-100 dark:text-white"
+            href={website}
+            target="__blank"
+        >
+            <i class="ri-movie-line dark:text-white"></i>
+            <span
+                class="inline-block h-[2] min-h-[1em] w-0.5 self-stretch bg-[var(--blue-dark)]"
+            >
             </span> Ver Demo
         </a>
     </div>
-    </div>
-    <div class="p-10 mx-auto max-w-3xl">
-        <h2 class="text-start font-bold text-4xl text-[#3450A2] dark:text-[#3450A2]">Sobre el Proyecto</h2>
-        <p class="text-start p-6 text-2xl opacity-80  ">{about}</p>
-    </div>
-    <div class="p-10 mx-auto max-w-3xl text-start">
-       <!--  <Titles title="Tecnologias"/> -->
-        <h2 class="text-start font-bold text-4xl text-[#3450A2] dark:text-[#3450A2]">
-            Tecnologias
-        </h2>
-        <p class="text-start text-2xl p-6 opacity-80 ">{techSpecs}</p>
-    </div>
-    <div class="flex justify-center items-center gap-6 pt-8 pb-12">
-        <img class="flex w-12 h-full hover:scale-110" src={tech1} alt="">
-        <img class="flex w-12 h-full hover:scale-110" src={tech2} alt="">
-        <img class="flex w-12 h-full hover:scale-110" src={tech3} alt="">
-        <img class="flex w-12 h-full hover:scale-110" src={tech4} alt="">
-    </div>
-    <Footer/>
 </Post>
+<div class="p-10 mx-auto max-w-3xl">
+    <h2
+        class="text-start font-bold text-4xl text-[#3450A2] dark:text-[#3450A2]"
+    >
+        Sobre el Proyecto
+    </h2>
+    <p class="text-start p-6 text-xl sm:text-2xl opacity-80">{about}</p>
+</div>
+<div class="p-10 mx-auto max-w-3xl text-start">
+    <!--  <Titles title="Tecnologias"/> -->
+    <h2
+        class="text-start font-bold text-4xl text-[#3450A2] dark:text-[#3450A2]"
+    >
+        Tecnologias
+    </h2>
+    <p class="text-start text-xl sm:text-2xl p-6 opacity-80">{techSpecs}</p>
+</div>
+<div class="flex justify-center items-center gap-6 pt-8 pb-12">
+    <img class="flex w-12 h-full hover:scale-110" src={tech1} alt="" />
+    <img class="flex w-12 h-full hover:scale-110" src={tech2} alt="" />
+    <img class="flex w-12 h-full hover:scale-110" src={tech3} alt="" />
+    <img class="flex w-12 h-full hover:scale-110" src={tech4} alt="" />
+</div>
+<Footer />
+
 <style>
-    p{
-       font-family: Matter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    p {
+        font-family: Matter, ui-sans-serif, system-ui, -apple-system,
+            BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial,
+            Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+            Segoe UI Symbol, Noto Color Emoji;
     }
 </style>
