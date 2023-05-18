@@ -17,7 +17,7 @@ const { title, description, image } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta
 			name="Portfolio"
-			content="Author:Francisco Lencina, Category: Portfolio, Blog. Resume: This is my portfolio and i will show you my skills and knowledge."
+			content="Author:Francisco Lencina, Category: Portfolio, Blog. Resume: Esta es la pagina de mis proyectos donde muestro con que estan echos a detalle."
 		/>
 		<meta name="theme-color" content="#317EFB" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
@@ -33,6 +33,9 @@ const { title, description, image } = Astro.props;
 		<meta property="og:image:width" content="400" /> 
 		<meta property="og:image:height" content="300" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<link rel="manifest" href="../../manifest.json">
+		
 		<title>{title}</title>
 	</head>
 	<body class="duration-300">

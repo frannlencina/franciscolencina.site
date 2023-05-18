@@ -5,13 +5,13 @@ function Card(props) {
     <li className="link-card flex flex-col items-end w-full gap-2 mb-8 bg-white dark:bg-[var(--blue-dark)] rounded-lg dark:text-white">
 	<div className="flex flex-col sm:flex-row">
 		<div className="Image flex justify-center items-center w-1/2 m-4">
-			<a href={props.website} target="__blank" className="cursor-pointer">
+			<a href={props.website} target="__blank">
 				<img className="rounded-md hover:opacity-60" src={props.image} alt="Projects Preview Image"/>
 			</a>
 		</div>
 		<div id="Body" className="m-4 flex flex-col gap-y-4 sm:gap-y-0 justify-around">
 			<div className="flex items-center">
-				<a href={props.website} className="flex gap-1 text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 cursor-pointer dark:text-white dark:opacity-100" target="__blank">
+				<a href={props.website} className="flex gap-1 text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 dark:text-white dark:opacity-100" target="__blank">
 					{props.title}
 					<i class="ri-external-link-line"></i>
 				</a>
