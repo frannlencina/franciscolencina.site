@@ -24,7 +24,7 @@ function Card(props) {
 			<div className="footer w-full flex flex-col sm:flex-row sm:gap-0 gap-4">
 				<div id="imagenes" className="flex gap-3 w-full items-center">
 
-				{props.tech.map((url) => <img className='tech hover:scale-105 duration-300 h-8' src={url} alt="Tecnologia utilizada." />)}
+				{props.tech.map((url, id) => <img key={id} className='tech hover:scale-105 duration-300 h-8' src={url} alt="Tecnologia utilizada." />)}
 
 				</div>
 				<div className="">
