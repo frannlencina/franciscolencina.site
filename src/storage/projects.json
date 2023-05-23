@@ -15,10 +15,26 @@
             "https://res.cloudinary.com/dctldwa03/image/upload/v1684342035/safepvp_hero2_rut2qo.png"
         ],
         "tech": [
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/javascript-logo_drsvuc.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/reactjs-logo_kqlp9a.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/tailwindcss-logo_wjbz44.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/vitejs-logo_fl5rei.png"
+            {
+                "id": "1",
+                "name": "JavaScript",
+                "url": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/javascript-logo_drsvuc.png"
+            },
+            {
+                "id": "2",
+                "name": "ReactJS",
+                "url": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/reactjs-logo_kqlp9a.png"
+            },
+            {
+                "id": "3",
+                "name": "TailwindCSS",
+                "url": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/tailwindcss-logo_wjbz44.png"
+            },
+            {
+                "id": "4",
+                "name": "ViteJs",
+                "url": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/vitejs-logo_fl5rei.png"
+            }
         ]
     },
     {
@@ -37,10 +53,26 @@
         ],
         "website": "",
         "tech": [
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/javascript-logo_drsvuc.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/reactjs-logo_kqlp9a.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/nodejs-logo_m4lwq7.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/mongodb-logo_qowzyr.png"
+            {
+                "id": "1",
+                "name": "JavaScript",
+                "url": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/javascript-logo_drsvuc.png"
+            },
+            {
+                "id": "2",
+                "name": "ReactJS",
+                "url": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/reactjs-logo_kqlp9a.png"
+            },
+            {
+                "id": "3",
+                "name": "NodeJs",
+                "url": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/nodejs-logo_m4lwq7.png"
+            },
+            {
+                "id": "4",
+                "name": "MongoDb",
+                "url": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/mongodb-logo_qowzyr.png"
+            }
         ]
     }
 ]

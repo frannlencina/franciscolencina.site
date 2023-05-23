@@ -79,5 +79,7 @@ const { title } = Astro.props;
 	}
 </style>
 <script>
-
+window.addEventListener('beforeunload',(event) =>{
+    console.log('Transicion...');
+});
 </script>
