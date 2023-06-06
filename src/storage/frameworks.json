@@ -17,7 +17,7 @@
     {
         "id": 4,
         "name": "Express",
-        "image": "https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png"
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1686072541/expressjs_logo_icon_169185_ubeqry.png"
     },
     {
         "id": 5,
@@ -27,6 +27,6 @@
     {
         "id": 6,
         "name": "Figma",
-        "image": "https://logodownload.org/wp-content/uploads/2022/12/figma-logo-0.png"
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1686072620/figma-logo-0_ky2bsu.png"
     }
 ]
