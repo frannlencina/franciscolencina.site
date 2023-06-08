@@ -8,9 +8,7 @@ function ToggleDarkBtn() {
         const newValue = !darkValue;
         setDarkValue(newValue);
         localStorage.setItem('isDarkMode', newValue);
-        setTimeout(function(){
-          location.reload()
-      }, 10);
+        
       };
     
       useEffect(() => {
