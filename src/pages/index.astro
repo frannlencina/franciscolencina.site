@@ -6,7 +6,6 @@ import SocialLine from "../components/SocialLine.astro";
 
 import EmojiMano from "../assets/mano-emoji.png";
 
-import Footer from "../components/Footer.astro";
 
 import Habilidades from "../pages/habilidades.astro";
 import Proyectos from "../pages/proyectos.astro";
@@ -14,21 +13,33 @@ import YoImg from "../components/YoImg";
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
-	<button
-		class="fixed text-white bg-black hover:bg-[var(--blue)] p-3 text-lg right-4 sm:right-20 lg:right-82 bottom-16 z-20 border-none hover:duration-300 cursor-pointer outline-none border rounded-md
-		dark:text-black dark:bg-white dark:hover:bg-[var(--blue)] "
-		id="scrollBtn"
-		title="Scroll to top"><i class="ri-arrow-up-line"></i></button>
-	<SocialLine />
-	<div class="container max-w-5xl m-0 mx-auto p-6 ">
-		<div class="PROFILE hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 overscroll-x-none">
+	<main class="container max-w-5xl m-0 mx-auto p-6">
+		<div>
+			<button
+				class="fixed text-white bg-black hover:bg-[var(--blue)] p-3 text-lg right-4 sm:right-20 lg:right-82 bottom-16 z-20 border-none hover:duration-300 cursor-pointer outline-none border rounded-md dark:text-black dark:bg-white dark:hover:bg-[var(--blue)]"
+				id="scrollBtn"
+				title="Scroll to top"><i class="ri-arrow-up-line"></i></button
+			>
+		</div>
+		<!-- PROFILE BACKGROUND TEXT -->
+
+		<div
+			class="PROFILE hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 overscroll-x-none"
+		>
 			<h4>PROFILE</h4>
 		</div>
-		<div class="justify-center sm:flex sm:justify-between">
+
+		<!-- PROFILE SECTION -->
+
+		<section class="justify-center sm:flex sm:justify-between">
 			<div>
 				<div class="main-text dark:text-white duration-300">
 					<p class="hi-text text-xl mb-4 mt-10">
-						Hola! <img class="emojiImage hover:scale-110 cursor-pointer duration-300" src={EmojiMano} alt="emoji mano" />, Soy
+						Hola! <img
+							class="emojiImage hover:scale-110 cursor-pointer duration-300"
+							src={EmojiMano}
+							alt="emoji mano"
+						/>, Soy
 					</p>
 					<div class="flex flex-col gap-2 sm:relative sm:-top-5">
 						<h2
@@ -46,9 +57,10 @@ import YoImg from "../components/YoImg";
 				<div class="main-info max-w-sm mt-6">
 					<div>
 						<p class="text-info mb-5 dark:text-white duration-300">
-							Tengo 19 años, vivo en Uruguay y soy Front End Developer.
-							Autodidacta, apasionado por la tecnologia y el como esta desarrollada.
-							Actualmente estudiando Tecnologo en Informatica.
+							Tengo 19 años, vivo en Uruguay y soy Front End
+							Developer. Autodidacta, apasionado por la tecnologia
+							y el como esta desarrollada. Actualmente estudiando
+							Tecnologo en Informatica.
 						</p>
 					</div>
 					<div class="flex justify-start">
@@ -57,130 +69,151 @@ import YoImg from "../components/YoImg";
 				</div>
 			</div>
 			<div class="flex justify-center mt-12 mb-24 p-6">
-				<YoImg client:load/>
+				<YoImg client:load />
 			</div>
-		</div>
+		</section>
+
+		<!-- SCROLL DOWN BTN -->
+
 		<div class="scrollDownBtn w-full flex justify-center scroll-mx-0">
 			<a
-				class="text-6xl text-[var(--blue)] hover:text-black hover:scale-110 dark:hover:text-white duration-300 "
+				class="text-6xl text-[var(--blue)] hover:text-black hover:scale-110 dark:hover:text-white duration-300"
 				aria-label="Scroll Down Button"
 				href="#Habilidades"><i class="ri-arrow-down-s-line"></i></a
 			>
 		</div>
+
+		<!-- SKILLS BACKGROUND TEXT -->
+
+		<div
+			class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 scroll-mx-0 overscroll-x-none"
+		>
+			<h4>SKILLS</h4>
+		</div>
+
+		<!-- SKILLS SECTION TEXT -->
+
 		<section id="Habilidades" class="mt-36">
-			<div class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 scroll-mx-0 overscroll-x-none">
-				<h4>SKILLS</h4>
-			</div>
-			<Titles title="Habilidades"/>
+			<Titles title="Habilidades" />
 			<Habilidades />
 		</section>
+
+		<!-- PROJECTS BACKGROUND TEXT -->
+
+		<div
+			class="PROJECTS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 scroll-mx-0 overscroll-x-none"
+		>
+			<h4>PROJECTS</h4>
+		</div>
+
+		<!-- PROJECTS SECTION TEXT -->
+
 		<section id="Proyectos">
-			<div class="PROJECTS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 scroll-mx-0 overscroll-x-none">
-				<h4>PROJECTS</h4>
-			</div>
 			<Titles title="Proyectos" />
 			<Proyectos />
 		</section>
-		<Footer />
-	</div>
-</Layout>
 
-<style>
-	.PROFILE{
-		font-family: 'Playfair Display', serif;
-		font-size: 170px;
-		letter-spacing: 20px;
-		left: -300px;
-		top: 370px;
-		pointer-events: none;
-	}
-	.SKILLS{
-		box-sizing: border-box;
-		font-family: 'Playfair Display', serif;
-		font-size: 200px;
-		right: -250px;
-		top: 1400px;
-		letter-spacing: 30px;
-		pointer-events: none;
-	}
-	.PROJECTS{
-		font-family: 'Playfair Display', serif;
-		font-size: 160px;
-		letter-spacing: 20px;
-		left: -300px;
-		bottom: -1700px;
-		pointer-events: none;
-	}
-	.hi-text {
-		display: flex;
-		font-family: "Space Mono", monospace;
-		font-weight: 400;
-		position: relative;
-		top: 0px;
-	}
-	.Francisco {
-		background-image: var(--blue-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-		font-weight: 800;
-		margin: 0px;
-	}
+		<!-- ASIDE SOCIAL -->
 
-	h2.dark{
-		background-image: var(--blue-white);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-		font-weight: 800;
-		margin: 0px;
-	}
+		<aside>
+			<SocialLine />
+		</aside>
+	</main>
 
-	.Lencina {
-		background-image: var(--black-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-		font-weight: 800;
-		margin: 0;
-	}
-
-	.text-info {
-		font-family: "Space Mono", monospace;
-	}
-
-
-
-	#scrollBtn {
-		display: none;
-
-}
-</style>
-
-<script>
-	let scrollBtn = document.getElementById("scrollBtn");
-	// 20px from the top show the button
-	window.onscroll = function () {
-		scrollFunction();
-	};
-	scrollBtn.addEventListener("click", () => {
-		topFunction();
-	});
-	function scrollFunction() {
-		if (
-			document.body.scrollTop > 20 ||
-			document.documentElement.scrollTop > 20
-		) {
-			scrollBtn.style.display = "block";
-		} else {
-			scrollBtn.style.display = "none";
+	<style>
+		.PROFILE {
+			font-family: "Playfair Display", serif;
+			font-size: 170px;
+			letter-spacing: 20px;
+			left: -300px;
+			top: 370px;
+			pointer-events: none;
 		}
-	}
-	function topFunction() {
-		document.body.scrollTop = 0; // For Safari
-		document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-	}
-</script>
+		.SKILLS {
+			box-sizing: border-box;
+			font-family: "Playfair Display", serif;
+			font-size: 200px;
+			right: -250px;
+			top: 1400px;
+			letter-spacing: 30px;
+			pointer-events: none;
+		}
+		.PROJECTS {
+			font-family: "Playfair Display", serif;
+			font-size: 160px;
+			letter-spacing: 20px;
+			left: -300px;
+			bottom: -1700px;
+			pointer-events: none;
+		}
+		.hi-text {
+			display: flex;
+			font-family: "Space Mono", monospace;
+			font-weight: 400;
+			position: relative;
+			top: 0px;
+		}
+		.Francisco {
+			background-image: var(--blue-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 400%;
+			background-position: 0%;
+			font-weight: 800;
+			margin: 0px;
+		}
+
+		h2.dark {
+			background-image: var(--blue-white);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 400%;
+			background-position: 0%;
+			font-weight: 800;
+			margin: 0px;
+		}
+
+		.Lencina {
+			background-image: var(--black-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 400%;
+			background-position: 0%;
+			font-weight: 800;
+			margin: 0;
+		}
+
+		.text-info {
+			font-family: "Space Mono", monospace;
+		}
+
+		#scrollBtn {
+			display: none;
+		}
+	</style>
+
+	<script>
+		let scrollBtn = document.getElementById("scrollBtn");
+		// 20px from the top show the button
+		window.onscroll = function () {
+			scrollFunction();
+		};
+		scrollBtn.addEventListener("click", () => {
+			topFunction();
+		});
+		function scrollFunction() {
+			if (
+				document.body.scrollTop > 20 ||
+				document.documentElement.scrollTop > 20
+			) {
+				scrollBtn.style.display = "block";
+			} else {
+				scrollBtn.style.display = "none";
+			}
+		}
+		function topFunction() {
+			document.body.scrollTop = 0; // For Safari
+			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+		}
+	</script>
+</Layout>

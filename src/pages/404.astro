@@ -1,31 +1,10 @@
 ---
-import Titles from "../components/Titles.astro";
-
 import Layout from "../layouts/Layout.astro";
 
 import ErrorImg from "../assets/imgs/404error.png";
 ---
-
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta
-			name="Portfolio"
-			content="Author:Francisco Lencina, Category: Portfolio, Blog. Resume: This is my portfolio and i will show you my skills and knowledge."
-		/>
-		<meta name="theme-color" content="#317EFB" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
-			rel="stylesheet"
-		/>
-		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio - 404 Error</title>
-	</head>
 	<Layout title="Portfolio - 404 Error">
-		<div class="container h-screen mx-auto">
+		<main class="container h-screen mx-auto">
 			<div class="Error ">
 				<img class="mx-auto" src={ErrorImg} alt="Error 404 Image" />
 			</div>
@@ -51,10 +30,8 @@ import ErrorImg from "../assets/imgs/404error.png";
 					</a>
 				</div>
 			</div>
-		</div>
+		</main>
 	</Layout>
-
-
 	<style>
 		.title-gradient {
 			background-image: var(--blue-gradient);

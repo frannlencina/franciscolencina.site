@@ -1,25 +1,29 @@
 ---
-import Card from '../components/Card'
+import Card from "../components/Card";
 
-import Data from '../storage/projects.json'
-
+import Data from "../storage/projects.json";
 ---
-<div class="md:py-24 ">
-<ul role="list" class="link-card-grid flex flex-col gap-4 items-center sm:max-w-xl sm:mx-auto md:max-w-3xl ">
-    
-   {
-     Data.map(item => (
-    <Card
-      slug={item.slug}
-      title={item.title}
-      description={item.description}
-      about={item.about}
-      techSpecs={item.techSpecs}
-      image={item.image}
-      website={item.website}
-      tech={item.tech}
-    />
-  ))
-   }
-</ul>
+
+<div class="md:py-24">
+  <ul
+    role="list"
+    class="link-card-grid flex flex-col gap-4 items-center sm:max-w-xl sm:mx-auto md:max-w-3xl"
+  >
+  <li class="link-card flex flex-col items-end w-full gap-2 mb-8 bg-white dark:bg-[var(--blue-dark)] rounded-lg dark:text-white">
+    {
+      Data.map((item) => (
+        <Card
+          slug={item.slug}
+          title={item.title}
+          description={item.description}
+          about={item.about}
+          techSpecs={item.techSpecs}
+          image={item.image}
+          website={item.website}
+          tech={item.tech}
+        />
+      ))
+    }
+    </li>
+  </ul>
 </div>

@@ -1,35 +1,39 @@
 ---
 import Frameworks from "../storage/frameworks.json";
 import Languages from "../storage/languages.json";
-
 ---
 
 <div class="flex flex-col gap-12">
-    <div class="flex flex-col items-center gap-12 my-24">
-        <div class="text-center dark:text-white">
+    <article class="flex flex-col items-center gap-12 my-24">
+        <header class="text-center dark:text-white">
             <h3 class="font-extrabold opacity-70 text-2xl sm:text-4xl">
                 Lenguajes
             </h3>
             <p class="text-lg max-w-md mt-4 opacity-70">
                 Lenguajes y tecnologias de las cuales tengo conocimiento.
             </p>
-        </div>
-        <div class="m-5">
+        </header>
+        <main class="m-5">
             <ul
                 class="max-w-2xl justify-items-center items-center grid gap-12 grid-cols-2 md:gap-6 md:grid-cols-6"
             >
                 {
                     Languages.map((item) => (
-                    <li class="inline-block">
-                        <img title={item.name} class="hover:scale-105 md:w-48" src={item.image} alt={item.name}/>
+                        <li class="inline-block">
+                            <img
+                                title={item.name}
+                                class="hover:scale-105 md:w-48"
+                                src={item.image}
+                                alt={item.name}
+                            />
                         </li>
                     ))
                 }
             </ul>
-        </div>
-    </div>
-    <div class="flex flex-col items-center gap-12 mb-24">
-        <div class="text-center dark:text-white">
+        </main>
+    </article>
+    <article class="flex flex-col items-center gap-12 mb-24">
+        <header class="text-center dark:text-white">
             <h3 class="font-extrabold opacity-70 text-2xl sm:text-4xl">
                 Frameworks
             </h3>
@@ -37,28 +41,33 @@ import Languages from "../storage/languages.json";
                 Frameworks y herramientas de las cuales tengo conocimiento y
                 utilizo.
             </p>
-        </div>
-        <div class="m-5 h-auto">
+        </header>
+        <main class="m-5 h-auto">
             <ul
                 class="max-w-2xl grid grid-flow-dense justify-items-center items-center gap-12 md:gap-6 grid-cols-2 md:grid-cols-6"
             >
                 {
                     Frameworks.map((item) => (
                         <li class="inline-block">
-                            <img title={item.name} class="hover:scale-105 md:w-48" src={item.image} alt={item.name}/>
+                            <img
+                                title={item.name}
+                                class="hover:scale-105 md:w-48"
+                                src={item.image}
+                                alt={item.name}
+                            />
                         </li>
                     ))
                 }
             </ul>
-        </div>
-    </div>
+        </main>
+    </article>
 </div>
+
 <style>
-    img{
+    img {
         width: 72px;
     }
     p {
         font-family: monospace;
     }
-
 </style>
