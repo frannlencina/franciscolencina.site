@@ -3,7 +3,7 @@ import React from 'react'
 function Card(props) {
 	return (
 		
-			<article className="flex flex-col sm:flex-row">
+			<article className="flex flex-col sm:flex-row bg-white dark:text-white dark:bg-[var(--blue-dark)] rounded-lg">
 				<aside className="Image flex justify-center items-center w-1/2 m-4">
 					<a href={props.website} target="__blank">
 						<img className="rounded-md hover:opacity-60" src={props.image} alt="Projects Preview Image" />
