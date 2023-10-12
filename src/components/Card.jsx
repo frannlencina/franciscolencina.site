@@ -1,8 +1,8 @@
 import React from 'react'
 
 function Card(props) {
+
 	return (
-		
 			<article className="flex flex-col sm:flex-row bg-white dark:text-white dark:bg-[var(--blue-dark)] rounded-lg">
 				<aside className="Image flex justify-center items-center w-1/2 m-4">
 					<a href={props.website} target="__blank">
@@ -13,7 +13,7 @@ function Card(props) {
 					<div className="flex items-center">
 						<a href={props.website} className="flex gap-1 text-start md:text-2xl font-black opacity-80 hover:border-b-4 border-gray-400 dark:text-white dark:opacity-100" target="__blank">
 							{props.title}
-							<i class="ri-external-link-line"></i>
+							<i className="ri-external-link-line"></i>
 						</a>
 					</div>
 					<div>
@@ -29,7 +29,7 @@ function Card(props) {
 						</div>
 						<div
 							className="flex text-center justify-center font-medium bg-[var(--blue)] text-white dark:bg-[var(--blue-deep)] dark:hover:bg-[var(--blue)] rounded-md hover:bg-gray-800 cursor-pointer">
-							<a className="flex py-2 px-6" href={`/projects/` + props.slug} >Detalles<i className="ri-arrow-right-line ml-1"></i></a>
+							<a className="flex py-2 px-6" href={ props.language + `projects/` + props.slug} >{props.text}<i className="ri-arrow-right-line ml-1"></i></a>
 						</div>
 					</footer>
 				</main>

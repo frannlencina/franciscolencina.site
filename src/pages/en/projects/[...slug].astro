@@ -1,7 +1,8 @@
 ---
-import Post from "../../layouts/Post.astro";
-import jsonData from "../../storage/projects.json";
-import Slider from "../../components/Slider";
+import Post from "../../../layouts/PostEn.astro";
+import jsonData from "../../../storage/projects-en.json";
+import Slider from "../../../components/Slider";
+
 
 const pages = jsonData;
 const { slug } = Astro.params;
@@ -28,7 +29,7 @@ const { title, description, image, about, techSpecs, website, screens, tech } = 
             class="flex gap-4 mt-4 py-2 rounded font-medium text-lg text-black dark:text-white hover:translate-x-[-8px] transition-all duration-200 dark:hover:translate-x-[-8px] opacity-80 hover:opacity-100"
             href="/"
         >
-            <i class="ri-arrow-left-line"></i> Volver al inicio</a
+            <i class="ri-arrow-left-line"></i> Home</a
         >
 
         <a
@@ -40,7 +41,7 @@ const { title, description, image, about, techSpecs, website, screens, tech } = 
             <span
                 class="inline-block h-[2] min-h-[1em] w-0.5 self-stretch bg-[var(--blue-dark)]"
             >
-            </span> Ver Demo
+            </span> Demo
         </a>
     </div>
 
@@ -48,7 +49,7 @@ const { title, description, image, about, techSpecs, website, screens, tech } = 
         <h2
             class="text-start font-bold text-4xl text-[#3450A2] dark:text-[#3450A2]"
         >
-            Sobre el Proyecto
+            About the project
         </h2>
         <p
             class="text-start p-6 text-xl sm:text-2xl dark:text-white opacity-80"
@@ -61,7 +62,7 @@ const { title, description, image, about, techSpecs, website, screens, tech } = 
         <h2
             class="text-start font-bold text-4xl text-[#3450A2] dark:text-[#3450A2]"
         >
-            Tecnologias
+        Technologies
         </h2>
         <p
             class="text-start text-xl sm:text-2xl dark:text-white p-6 opacity-80"
@@ -75,7 +76,7 @@ const { title, description, image, about, techSpecs, website, screens, tech } = 
                 <img
                     class="mt-8 mx-2 h-12"
                     src={url}
-                    alt="Tecnologia utilizada."
+                    alt="Technology used"
                 />
             ))
         }

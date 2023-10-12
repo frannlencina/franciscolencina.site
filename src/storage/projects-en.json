@@ -3,9 +3,9 @@
         "slug": "Keyswh",
         "id": 1,
         "title": "Keyswh",
-        "about": "Keyswh actualmente esta en beta, fue creada con el objetivo de crear una comunidad de personas con el amor hacia el mismo hobbie. La pagina cuenta con secciones, Guias y News.Yo controlare desde una Admin Dashboard con un Login exclusivos para Administradores estas secciones. Donde se podran agregar posts, eliminar y editar.",
-        "techSpecs": "La aplicacion esta dividida en dos partes, el FrontEnd y el BackEnd. En el FrontEnd la pagina fue desarrollada con ReactJS como framework de JS y Tailwind CSS como framework de CSS. En el BackEnd la pagina esta Desarrollada con Node Js y Express para administrar las peticiones al servidor y Mongoose para conectar a MongoDb. Tambien utilize herramientas como JSONWebToken para la authenticacion y el Middelware en las peticiones de las rutas.",
-        "description": "Keyswh es una comunidad de teclados mecanicos, donde podras ver guias, noticias e informarte sobre estos.",
+        "about": "Keyswh is currently in beta, it was created with the aim of creating a community of people with a love for the same hobby. The page has sections, Guides and News. I will control these sections from an Admin Dashboard with an exclusive Login for Administrators. Where you can add, delete and edit posts.",
+        "techSpecs": "The application is divided into two parts, the FrontEnd and the BackEnd. In the FrontEnd the page was developed with ReactJS as the JS framework and Tailwind CSS as the CSS framework. In the BackEnd the page is Developed with Node Js and Express to manage requests to the server and Mongoose to connect to MongoDb. Also use tools like JSONWebToken for authentication and Middelware in route requests.",
+        "description": "Keyswh is a mechanical keyboard community, where you can see guides, news and learn about them.",
         "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1684339873/keyswh_hero_jsiwtm.png",
         "screens": [
             "https://res.cloudinary.com/dctldwa03/image/upload/v1684339873/keyswh_hero_jsiwtm.png",
@@ -20,15 +20,15 @@
             "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/nodejs-logo_m4lwq7.png",
             "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/mongodb-logo_qowzyr.png"
         ],
-        "language": "/"
+        "language": "/en/"
     },
     {
         "slug": "SafePvP",
         "id": 2,
         "title": "SafePvP",
-        "about": "SafePvP fue la pagina oficial de un exitoso servidor de el videojuego Minecraft. Donde los usuarios podian entrar a dicha pagina, copiar la ip, ver la cantidad de jugadores online a tiempo real, ver las reglas o simplemente dirigirse a la tienda del servidor. Tambien habian secciones donde se mostraban las modalidades actuales de la temporada e informarse sobre estas.",
-        "techSpecs": "La pagina fue creada con React Js como Framework de JS, con Tailwind CSS como Framework de CSS,y con herramienta de compilacion ViteJS. Fue planteada, diseñada y estructurada antes de dicho desarrollo en Figma. La pagina tambien trabajaba con una API donde se extraian los datos para ver a tiempo real la cantidad de jugadores online.",
-        "description": "SafePvP es la pagina oficial sobre un ex servidor de un videojuego.",
+        "about": "SafePvP was the official page of a successful Minecraft video game server. Where users could enter said page, copy the IP, see the number of players online in real time, see the rules or simply go to the server store. There were also sections where the current modalities of the season were shown and information about them.",
+        "techSpecs": "The page was created with React Js as the JS Framework, with Tailwind CSS as the CSS Framework, and with the ViteJS build tool. It was planned, designed and structured before said development in Figma. The page also worked with an API where data was extracted to see the number of online players in real time.",
+        "description": "SafePvP is the official page about a former video game server.",
         "website": "https://safepvp.000webhostapp.com/",
         "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1684342116/safepvp_hero_yey4jm.jpg",
         "screens": [
@@ -43,6 +43,6 @@
             "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/tailwindcss-logo_wjbz44.png",
             "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/vitejs-logo_fl5rei.png"
         ],
-        "language": "/"
+        "language": "/en/"
     }
 ]

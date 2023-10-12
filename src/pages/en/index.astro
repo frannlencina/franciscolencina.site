@@ -1,12 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Titles from "../components/Titles.astro";
-import DvButton from "../components/DvButton";
-import SocialLine from "../components/SocialLine.astro";
-import EmojiMano from "../assets/mano-emoji.png";
-import Habilidades from "../pages/habilidades.astro";
-import Proyectos from "../pages/proyectos.astro";
-import YoImg from "../components/YoImg";
+import Layout from "../../layouts/LayoutEn.astro";
+import Titles from "../../components/Titles.astro";
+import DvButton from "../../components/DvButton";
+import SocialLine from "../../components/SocialLine.astro";
+import EmojiMano from "../../assets/mano-emoji.png";
+import Habilidades from "../../pages/habilidades.astro";
+import Proyectos from "../../pages/en/proyectos.astro";
+import YoImg from "../../components/YoImg";
+
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
@@ -27,15 +28,16 @@ import YoImg from "../components/YoImg";
 		</div>
 
 		<!-- PROFILE SECTION -->
+
 		<section class="justify-center sm:flex sm:justify-between">
 			<div>
 				<div class="main-text dark:text-white duration-300">
 					<p class="hi-text text-xl mb-4 mt-10">
-						Hola! <img
+						Hi! <img
 							class="emojiImage hover:scale-110 cursor-pointer duration-300"
 							src={EmojiMano}
 							alt="emoji mano"
-						/>, Soy
+						/>, Im
 					</p>
 					<div class="flex flex-col gap-2 sm:relative sm:-top-5">
 						<h2
@@ -53,11 +55,11 @@ import YoImg from "../components/YoImg";
 				<div class="main-info max-w-sm mt-6">
 					<div>
 						<p class="text-info mb-5 dark:text-white duration-300">
-							Tengo 19 años, vivo en Uruguay y soy Front End Developer. Autodidacta, apasionado por la tecnologia y el como esta desarrollada. Actualmente estudiando Tecnologo en Informatica.
+							I am 19 years old, I live in Uruguay and I am a Front End Developer. Self-taught, passionate about technology and how it is developed. Currently studying Computer Technology.
 						</p>
 					</div>
 					<div class="flex justify-start">
-						<DvButton text="Descargar CV" />
+						<DvButton text="Download CV" />
 					</div>
 				</div>
 			</div>
@@ -78,16 +80,15 @@ import YoImg from "../components/YoImg";
 
 		<!-- SKILLS BACKGROUND TEXT -->
 
-		<div
-			class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 scroll-mx-0 overscroll-x-none"
-		>
+		<div class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 scroll-mx-0 overscroll-x-none">
 			<h4>SKILLS</h4>
 		</div>
+
 		<!-- SKILLS SECTION TEXT -->
 
 		<section id="Habilidades" class="mt-36">
-			<Titles title="Habilidades" />
-			<Habilidades texts={ { about_frameworks: "Frameworks y herramientas de las cuales tengo conocimiento y utilizo.", about_languages: "Lenguajes y tecnologias de las cuales tengo conocimiento." } } />
+			<Titles title="Skills" />
+			<Habilidades texts={ { languages: "Languages", frameworks: "Frameworks", about_frameworks: "Frameworks and tools that I am aware of and use.", about_languages: "Languages ​​and technologies of which I have knowledge." } } />
 		</section>
 
 		<!-- PROJECTS BACKGROUND TEXT -->
@@ -101,7 +102,7 @@ import YoImg from "../components/YoImg";
 		<!-- PROJECTS SECTION TEXT -->
 
 		<section id="Proyectos">
-			<Titles title="Proyectos" />
+			<Titles title="Projects" />
 			<Proyectos />
 		</section>
 
