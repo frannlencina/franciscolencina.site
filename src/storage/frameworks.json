@@ -1,32 +1,43 @@
 [
     {
         "id": 1,
-        "name": "ViteJs",
-        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/vitejs-logo_fl5rei.png"
+        "name": "ReactJs",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
     },
     {
         "id": 2,
+        "name": "NextJS",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1697772557/next-js_op6isv.svg"
+    },
+    {
+        "id": 3,
         "name": "TailwindCSS",
         "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/tailwindcss-logo_wjbz44.png"
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Bootstrap",
         "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214384/bootstrap-logo_l3jem4.png"
     },
     {
-        "id": 4,
+        "id": 5,
+        "name": "ViteJs",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/vitejs-logo_fl5rei.png"
+    },
+    {
+        "id": 6,
         "name": "Express",
         "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1686072541/expressjs_logo_icon_169185_ubeqry.png"
     },
     {
-        "id": 5,
+        "id": 7,
         "name": "Astro",
         "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1678214384/astrojs_xqbyuy.svg"
     },
     {
-        "id": 6,
+        "id": 8,
         "name": "Figma",
         "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1686072620/figma-logo-0_ky2bsu.png"
     }
+    
 ]

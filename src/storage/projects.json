@@ -44,5 +44,28 @@
             "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/vitejs-logo_fl5rei.png"
         ],
         "language": "/"
+    },
+    {
+        "slug": "PinkMc",
+        "id": 3,
+        "title": "PinkMc",
+        "about": "Brindando a los usuarios informacion de las ultimas Noticias/Actualizaciones, Ranking y Estadisticas de los mejores usuarios del servidor, entre otras cosas. Teniendo los administradores un Dashboard exclusivo para poder Agregar, Editar, Eliminar publicaciones y ver informacion sobre los usuarios.",
+        "techSpecs": "La aplicacion esta estructurada como monolitica, dicho proyecto esta creado con NextJS y TailwindCSS del lado del FrontEnd y por el lado del BackEnd esta creada con TypeScript, Express, Mongoose y JSONWebToken.",
+        "description": "PinkMc es la pagina oficial de un servidor exitoso del videojuego Minecraft.",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1697768075/ScreenPink2_qzacfs.png",
+        "screens": [
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1697768075/ScreenPink2_qzacfs.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1697772697/ScreenPink3_g6lx5a.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1697772876/ScreenPink4_sscmpl.png"
+        ],
+        "website": "https://pinkmc.us/",
+        "tech": [
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1697772557/next-js_op6isv.svg",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/reactjs-logo_kqlp9a.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/nodejs-logo_m4lwq7.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/mongodb-logo_qowzyr.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1697775481/tslogo_akmllv.png"
+        ],
+        "language": "/"
     }
 ]

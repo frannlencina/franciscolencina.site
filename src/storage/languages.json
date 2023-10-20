@@ -16,17 +16,17 @@
     },
     {
         "id": 4,
-        "name": "ReactJs",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+        "name": "TypeScript",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1697775481/tslogo_akmllv.png"
     },
     {
         "id": 5,
-        "name": "NodeJs",
-        "image": "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
+        "name": "MongoDb",
+        "image": "https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png"
     },
     {
         "id": 6,
-        "name": "MongoDb",
-        "image": "https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png"
+        "name": "NodeJs",
+        "image": "https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png"
     }
     ]
