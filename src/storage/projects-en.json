@@ -1,7 +1,30 @@
 [
     {
-        "slug": "Keyswh",
+        "slug": "SafePvP",
         "id": 1,
+        "title": "SafePvP",
+        "about": "SafePvP was the official page of a successful Minecraft video game server. Where users could enter said page, copy the IP, see the number of players online in real time, see the rules or simply go to the server store. There were also sections where the current modalities of the season were shown and information about them.",
+        "techSpecs": "The page was created with React Js as the JS Framework, with Tailwind CSS as the CSS Framework, and with the ViteJS build tool. It was planned, designed and structured before said development in Figma. The page also worked with an API where data was extracted to see the number of online players in real time.",
+        "description": "SafePvP is the official page about a former video game server.",
+        "website": "https://safepvp.000webhostapp.com/",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1684342116/safepvp_hero_yey4jm.jpg",
+        "screens": [
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1684342116/safepvp_hero_yey4jm.jpg",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1684342035/safepvp_hero3_nqnudb.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1684342035/safepvp_404_rq2czh.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1684342035/safepvp_hero2_rut2qo.png"
+        ],
+        "tech": [
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/javascript-logo_drsvuc.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/reactjs-logo_kqlp9a.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/tailwindcss-logo_wjbz44.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/vitejs-logo_fl5rei.png"
+        ],
+        "language": "/en/"
+    },
+    {
+        "slug": "Keyswh",
+        "id": 2,
         "title": "Keyswh",
         "about": "Keyswh is currently in beta, it was created with the aim of creating a community of people with a love for the same hobby. The page has sections, Guides and News. I will control these sections from an Admin Dashboard with an exclusive Login for Administrators. Where you can add, delete and edit posts.",
         "techSpecs": "The application is divided into two parts, the FrontEnd and the BackEnd. In the FrontEnd the page was developed with ReactJS as the JS framework and Tailwind CSS as the CSS framework. In the BackEnd the page is Developed with Node Js and Express to manage requests to the server and Mongoose to connect to MongoDb. Also use tools like JSONWebToken for authentication and Middelware in route requests.",
@@ -23,25 +46,25 @@
         "language": "/en/"
     },
     {
-        "slug": "SafePvP",
-        "id": 2,
-        "title": "SafePvP",
-        "about": "SafePvP was the official page of a successful Minecraft video game server. Where users could enter said page, copy the IP, see the number of players online in real time, see the rules or simply go to the server store. There were also sections where the current modalities of the season were shown and information about them.",
-        "techSpecs": "The page was created with React Js as the JS Framework, with Tailwind CSS as the CSS Framework, and with the ViteJS build tool. It was planned, designed and structured before said development in Figma. The page also worked with an API where data was extracted to see the number of online players in real time.",
-        "description": "SafePvP is the official page about a former video game server.",
-        "website": "https://safepvp.000webhostapp.com/",
-        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1684342116/safepvp_hero_yey4jm.jpg",
+        "slug": "LetrasSinFiltro",
+        "id": 3,
+        "title": "LetrasSinFiltro",
+        "about": "LetrasSinFiltro is a platform that helps you say what you feel in an original and creative way. Choose from thousands of phrases and hints for each situation: love, heartbreak, friendship, work.",
+        "techSpecs": "The page is created with NextJS as a FrontEnd framework using TailwindCSS for the styles. It also uses Mongoose and MongoDb for connecting and managing the database.",
+        "description": "LetrasSinFiltro is a phrase generator with AI and future Social Network focused on relief in phrases and hints.",
+        "website": "https://www.letrassinfiltro.site/",
+        "image": "https://res.cloudinary.com/dctldwa03/image/upload/v1708982042/lssfo-hero_jpqcrv.png",
         "screens": [
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1684342116/safepvp_hero_yey4jm.jpg",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1684342035/safepvp_hero3_nqnudb.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1684342035/safepvp_404_rq2czh.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1684342035/safepvp_hero2_rut2qo.png"
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1708982042/lssfo-hero_jpqcrv.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1708982042/lssfo-not-found_ou9lfl.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1708982042/lssfo-login_ols9ya.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1708982042/lssfo-aboutus_x6grgb.png"
         ],
         "tech": [
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/javascript-logo_drsvuc.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/reactjs-logo_kqlp9a.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1708982259/png-transparent-next-js-hd-logo_qgsmxy.png",
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1697775481/tslogo_akmllv.png",
             "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/tailwindcss-logo_wjbz44.png",
-            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214386/vitejs-logo_fl5rei.png"
+            "https://res.cloudinary.com/dctldwa03/image/upload/v1678214385/mongodb-logo_qowzyr.png"
         ],
         "language": "/en/"
     }
