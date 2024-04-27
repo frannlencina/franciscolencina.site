@@ -1,5 +1,3 @@
-import React from 'react'
-
 import Curriculum from '/francisco-lencina-curriculum.pdf'
 
 function DvButton(props) {
