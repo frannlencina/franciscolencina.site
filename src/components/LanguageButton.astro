@@ -1,7 +1,0 @@
----
-const currentPath = Astro.url.pathname;
----
-
-<div>
-    <a class="bg-[#3450A2] dark:bg-[#3450A2] text-white dark:text-white px-4 py-2 cursor-pointer hover:ring-2 hover:ring-stone-300 dark:hover:ring-2 dark:hover:ring-white outline-none font-medium transition-all rounded-md"  href={currentPath === '/' ? '/en/' : '/'}> {currentPath === '/' ? 'English' : 'Español'} </a>
-</div>
