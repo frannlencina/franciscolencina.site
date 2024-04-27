@@ -1,5 +1,4 @@
 ---
-import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
 export interface Props {
@@ -45,20 +44,10 @@ const { title } = Astro.props;
 			async
 			src="https://www.googletagmanager.com/gtag/js?id=G-VMWZH9EN3H"
 		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-VMWZH9EN3H");
-		</script>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="duration-300">
-		<Navbar DvButtonText="Descargar CV" href="/" />
 		<slot />
 		<Footer />
 	</body>
@@ -66,51 +55,21 @@ const { title } = Astro.props;
 <style is:global>
 	@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 	@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-	:root {
-		--blue: #3450a2;
-		--blue-pastel: #5f75b6;
-		--blue-dark: #272d40;
-		--blue-deep: #141825;
-		--black: rgba(46, 46, 46, 1);
-		--blue-white: linear-gradient(
-			90deg,
-			#3450a2 10.77%,
-			#cfcfcf 82.04%,
-			#ffffff 97.06%
-		);
-		--white-blue: linear-gradient(
-			270.05deg,
-			#3450a4 -5.55%,
-			#ffffff 110.25%
-		);
-		--blue-gradient: linear-gradient(
-			90deg,
-			rgba(52, 80, 164, 1) 0%,
-			rgba(46, 46, 46, 1) 20%,
-			rgba(46, 46, 46, 1) 60%
-		);
-		--black-gradient: linear-gradient(
-			90deg,
-			rgba(46, 46, 46, 1) 0%,
-			rgba(52, 80, 164, 1) 10%,
-			rgba(52, 80, 164, 1) 60%
-		);
-	}
+	@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #f6f6f6;
+		font-family: "Onest", system-ui, sans-serif;
 		scroll-behavior: smooth;
 	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-	.dark {
-		background-color: #141825;
+
+	body {
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			rgba(0, 0, 0, 0) 0%,
+			rgba(0, 0, 0, 0.1) 50%,
+			rgba(0, 0, 0, 0.5) 100%
+		);
+		background-color: #181818;
 	}
 </style>
-<script>
-	window.addEventListener("beforeunload", (event) => {
-		console.log("Transicion...");
-	});
-</script>
+<script></script>

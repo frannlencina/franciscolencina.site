@@ -1,5 +1,4 @@
 ---
-import Navbar from "../components/Navbar.astro";
 import Footer from '../components/Footer.astro';
 
 export interface Props {
@@ -40,7 +39,7 @@ const { title, description, image } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="duration-300">
-		<Navbar href="/" />
+		
 		<main class="container max-w-3xl mx-auto h-fit dark:text-white">
 			<slot />
 		</main>
@@ -83,16 +82,7 @@ const { title, description, image } = Astro.props;
 		scroll-behavior: smooth;
 		background-color: #f6f6f6;
 	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-			DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-	.dark {
-		background-color: #141825;
-	}
 </style>
 <script>
-	window.addEventListener('beforeunload',(event) =>{
-		console.log('Transicion...');
-});
+	
 </script>

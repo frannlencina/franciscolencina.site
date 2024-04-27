@@ -1,212 +1,209 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Titles from "../components/Titles.astro";
-import DvButton from "../components/DvButton";
-import SocialLine from "../components/SocialLine.astro";
-import EmojiMano from "../assets/mano-emoji.png";
-import Habilidades from "../pages/habilidades.astro";
-import Proyectos from "../pages/proyectos.astro";
-import YoImg from "../components/YoImg";
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
-	<main class="container max-w-5xl m-0 mx-auto p-6">
-		<div>
-			<button
-				class="fixed text-white bg-black hover:bg-[var(--blue)] p-3 text-lg right-4 sm:right-20 lg:right-82 bottom-16 z-20 border-none hover:duration-300 cursor-pointer outline-none border rounded-md dark:text-black dark:bg-white dark:hover:bg-[var(--blue)]"
-				id="scrollBtn"
-				title="Scroll to top"><i class="ri-arrow-up-line"></i></button
-			>
-		</div>
-		<!-- PROFILE BACKGROUND TEXT -->
-
-		<div
-			class="PROFILE hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 overscroll-x-none"
-		>
-			<h4>PROFILE</h4>
-		</div>
-
+	<main class="w-full m-0">
 		<!-- PROFILE SECTION -->
-		<section class="justify-center sm:flex sm:justify-between">
-			<div>
-				<div class="main-text dark:text-white duration-300">
-					<p class="hi-text text-xl mb-4 mt-10">
-						Hola! <img
-							class="emojiImage hover:scale-110 cursor-pointer duration-300"
-							src={EmojiMano}
-							alt="emoji mano"
-						/>, Soy
-					</p>
-					<div class="flex flex-col gap-2 sm:relative sm:-top-5">
-						<h2
-							class="Francisco text-5xl relative top-0 sm:text-6xl sm:top-5 lg:text-8xl dark:bg-gradient-to-r from-[var(--blue)] to-white"
-						>
-							Francisco
-						</h2>
-						<h2
-							class="Lencina text-5xl inline-flex w-fit relative -top-3 sm:text-6xl sm:top-0 lg:text-8xl dark:bg-gradient-to-r from-[var(--blue-pastel)] to-[var(--blue)]"
-						>
-							Lencina
-						</h2>
-					</div>
-				</div>
-				<div class="main-info max-w-md">
-					<div>
-						<p class="text-info mb-4 md:mt-6 dark:text-white duration-300 md:text-xl opacity-90">
-							Tengo 19 años, vivo en Uruguay y soy Front End Developer. Autodidacta, apasionado por la tecnologia y el como esta desarrollada. Actualmente estudiando Tecnologo en Informatica.
-						</p>
-					</div>
-					<div class="flex justify-start">
-						<DvButton text="Descargar CV" />
-					</div>
-				</div>
-			</div>
-			<div class="flex justify-center md:mt-24 md:px-6 pt-6 md:scale-110">
-				<YoImg client:load />
-			</div>
-		</section>
-
-		<!-- SCROLL DOWN BTN -->
-
-		<div class="scrollDownBtn w-full flex justify-center scroll-mx-0">
-			<a
-				class="text-6xl text-[var(--blue)] hover:text-black hover:scale-110 dark:hover:text-white duration-300"
-				aria-label="Scroll Down Button"
-				href="#Habilidades"><i class="ri-arrow-down-s-line"></i></a
+		<section class="flex justify-between w-full" id="Profile">
+			<div
+				class="flex items-center justify-between gap-8 max-w-[830px] mx-auto mt-48"
 			>
-		</div>
-
-		<!-- SKILLS BACKGROUND TEXT -->
-
-		<div
-			class="SKILLS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 scroll-mx-0 overscroll-x-none"
-		>
-			<h4>SKILLS</h4>
-		</div>
-		<!-- SKILLS SECTION TEXT -->
-
-		<section id="Habilidades" class="mt-36">
-			<Titles title="Habilidades" />
-			<Habilidades texts={ { about_frameworks: "Frameworks y herramientas de las cuales tengo conocimiento y utilizo.", about_languages: "Lenguajes y tecnologias de las cuales tengo conocimiento." } } />
+				<div class="max-w-md">
+					<div class="flex flex-col">
+						<h4 class="font-regular text-white text-xl">
+							hey there 👋
+						</h4>
+						<h1 class="ml-4 font-bold text-4xl text-white">
+							Im Francisco
+						</h1>
+						<p
+							class="text-white text-lg font-regular opacity-60 mt-4"
+						>
+							Tengo 19 años, vivo en Uruguay y soy Front End
+							Developer. Autodidacta, apasionado por la tecnologia
+							y el como esta desarrollada. Actualmente estudiando
+							Tecnologo en Informatica.
+						</p>
+						<button
+							class="border-b outline-b-indigo-50 mt-2 mb-6 text-white font-['Fira_Code'] w-fit"
+							>Leer mas</button
+						>
+					</div>
+					<div class="flex gap-4 ml-4 my-5">
+						<button
+							class="px-4 py-2 text-white text-opacity-90 font-semibold border border-[#737373] rounded-lg bg-gradient-to-t from-[#0B0B0B] to-[#212121]"
+							>Descargar CV</button
+						>
+						<div
+							class="flex text-white opacity-50 justify-center items-center gap-2 text-2xl"
+						>
+							<a class="opacity-50 hover:opacity-100" href=""
+								><i class="ri-github-line"></i></a
+							>
+							<a class="opacity-50 hover:opacity-100" href=""
+								><i class="ri-twitter-line"></i></a
+							>
+							<a class="opacity-50 hover:opacity-100" href=""
+								><i class="ri-mail-star-line"></i></a
+							>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="flex flex-col relative left-28 top-6">
+						<span class="font-bold text-[#A9B5C1]">ahora</span>
+						<span
+							class="flex items-center w-fit cursor-pointer select-none hover:scale-[1.01] transition-all duration-200 hover:skew-y-2 hover:ring-4 hover:ring-[#A9B5C1] px-4 py-2 rounded-2xl text-[#414141] bg-[#CBCCD0]"
+							>Escuchando Spotify <i class="ri-arrow-right-s-line"
+							></i></span
+						>
+					</div>
+					<img src="/yo-imagen.png" alt="Imagen  de Francisco" />
+				</div>
+			</div>
 		</section>
 
-		<!-- PROJECTS BACKGROUND TEXT -->
+		<section class="bg-[#181818] w-full">
+			<section
+				class="max-w-[830px] mt-56 mx-auto relative -top-28"
+				id="Proyectos"
+			>
+				<h4 class="text-white font-medium text-xl">Proyectos</h4>
 
-		
-		<div
-			class="PROJECTS hidden 2xl:block absolute opacity-10 rotate-90 dark:text-blue-300 dark:opacity-10 scroll-mx-0 overscroll-x-none"
-		>
-			<h4>PROJECTS</h4>
-		</div>
+				<div class="grid grid-cols-2 gap-4 mt-8">
+					<div
+						class="group flex text-white border border-[#3A3A3A] hover:border-[#585858] hover:scale-[1.01] bg-[#242424] px-6 py-4 rounded-xl cursor-pointer transition-all duration-200"
+					>
+						<div class="flex flex-col gap-2">
+							<h5
+								class="text-lg font-bold opacity-70 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro
+							</h5>
+							<p
+								class="opacity-50 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro es un generador de frases con IA
+								y futura Red Social enfocada en el desahogo en
+								frases e indirectas.
+							</p>
+						</div>
+						<div
+							class="w-fit text-2xl relative -top-2 left-4 text-[#B9B9B9]"
+						>
+							<i class="ri-arrow-right-up-line"></i>
+						</div>
+					</div>
+					<div
+						class="group flex text-white border border-[#3A3A3A] hover:border-[#585858] hover:scale-[1.01] bg-[#242424] px-6 py-4 rounded-xl cursor-pointer transition-all duration-200"
+					>
+						<div class="flex flex-col gap-2">
+							<h5
+								class="text-lg font-bold opacity-70 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro
+							</h5>
+							<p
+								class="opacity-50 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro es un generador de frases con IA
+								y futura Red Social enfocada en el desahogo en
+								frases e indirectas.
+							</p>
+						</div>
+						<div
+							class="w-fit text-2xl relative -top-2 left-4 text-[#B9B9B9]"
+						>
+							<i class="ri-arrow-right-up-line"></i>
+						</div>
+					</div>
+					<div
+						class="group flex text-white border border-[#3A3A3A] hover:border-[#585858] hover:scale-[1.01] bg-[#242424] px-6 py-4 rounded-xl cursor-pointer transition-all duration-200"
+					>
+						<div class="flex flex-col gap-2">
+							<h5
+								class="text-lg font-bold opacity-70 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro
+							</h5>
+							<p
+								class="opacity-50 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro es un generador de frases con IA
+								y futura Red Social enfocada en el desahogo en
+								frases e indirectas.
+							</p>
+						</div>
+						<div
+							class="w-fit text-2xl relative -top-2 left-4 text-[#B9B9B9]"
+						>
+							<i class="ri-arrow-right-up-line"></i>
+						</div>
+					</div>
+					<div
+						class="group flex text-white border border-[#3A3A3A] hover:border-[#585858] hover:scale-[1.01] bg-[#242424] px-6 py-4 rounded-xl cursor-pointer transition-all duration-200"
+					>
+						<div class="flex flex-col gap-2">
+							<h5
+								class="text-lg font-bold opacity-70 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro
+							</h5>
+							<p
+								class="opacity-50 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro es un generador de frases con IA
+								y futura Red Social enfocada en el desahogo en
+								frases e indirectas.
+							</p>
+						</div>
+						<div
+							class="w-fit text-2xl relative -top-2 left-4 text-[#B9B9B9]"
+						>
+							<i class="ri-arrow-right-up-line"></i>
+						</div>
+					</div>
+					<div
+						class="group flex text-white border border-[#3A3A3A] hover:border-[#585858] hover:scale-[1.01] bg-[#242424] px-6 py-4 rounded-xl cursor-pointer transition-all duration-200"
+					>
+						<div class="flex flex-col gap-2">
+							<h5
+								class="text-lg font-bold opacity-70 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro
+							</h5>
+							<p
+								class="opacity-50 group-hover:opacity-100 transition-all duration-200"
+							>
+								LetrasSinFiltro es un generador de frases con IA
+								y futura Red Social enfocada en el desahogo en
+								frases e indirectas.
+							</p>
+						</div>
+						<div
+							class="w-fit text-2xl relative -top-2 left-4 text-[#B9B9B9]"
+						>
+							<i class="ri-arrow-right-up-line"></i>
+						</div>
+					</div>
+				</div>
+			</section>
 
-		<!-- PROJECTS SECTION TEXT -->
-
-		<section id="Proyectos">
-			<Titles title="Proyectos" />
-			<Proyectos />
+			<section class="max-w-[830px] mx-auto" id="Skills">
+				<div>
+					<h5 class="text-white font-medium text-xl">Stack</h5>
+					<div>
+						<!-- Lista de logos de las tecnologias que utilizo. -->
+					</div>
+				</div>
+				<div>
+					<h5 class="text-white font-medium text-xl">Herramientas</h5>
+					<div>
+						<!-- Lista de logos de herramientas adicionales que utilizo. -->
+					</div>
+				</div>
+			</section>
 		</section>
-
-		<!-- ASIDE SOCIAL -->
-
-		<aside>
-			<SocialLine />
-		</aside>
 	</main>
-
-	<style>
-		.PROFILE {
-			font-family: "Playfair Display", serif;
-			font-size: 170px;
-			letter-spacing: 20px;
-			left: -300px;
-			top: 370px;
-			pointer-events: none;
-		}
-		.SKILLS {
-			box-sizing: border-box;
-			font-family: "Playfair Display", serif;
-			font-size: 200px;
-			right: -250px;
-			top: 1400px;
-			letter-spacing: 30px;
-			pointer-events: none;
-		}
-		.PROJECTS {
-			font-family: "Playfair Display", serif;
-			font-size: 160px;
-			letter-spacing: 20px;
-			left: -300px;
-			bottom: -1700px;
-			pointer-events: none;
-		}
-		.hi-text {
-			display: flex;
-			font-family: "Space Mono", monospace;
-			font-weight: 400;
-			position: relative;
-			top: 0px;
-		}
-		.Francisco {
-			background-image: var(--blue-gradient);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 400%;
-			background-position: 0%;
-			font-weight: 800;
-			margin: 0px;
-		}
-
-		h2.dark {
-			background-image: var(--blue-white);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 400%;
-			background-position: 0%;
-			font-weight: 800;
-			margin: 0px;
-		}
-
-		.Lencina {
-			background-image: var(--black-gradient);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 400%;
-			background-position: 0%;
-			font-weight: 800;
-			margin: 0;
-		}
-
-		.text-info {
-			font-family: "Space Mono", monospace;
-		}
-
-		#scrollBtn {
-			display: none;
-		}
-	</style>
-
-	<script>
-		let scrollBtn = document.getElementById("scrollBtn");
-		// 20px from the top show the button
-		window.onscroll = function () {
-			scrollFunction();
-		};
-		scrollBtn.addEventListener("click", () => {
-			topFunction();
-		});
-		function scrollFunction() {
-			if (
-				document.body.scrollTop > 20 ||
-				document.documentElement.scrollTop > 20
-			) {
-				scrollBtn.style.display = "block";
-			} else {
-				scrollBtn.style.display = "none";
-			}
-		}
-		function topFunction() {
-			document.body.scrollTop = 0; // For Safari
-			document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-		}
-	</script>
 </Layout>
