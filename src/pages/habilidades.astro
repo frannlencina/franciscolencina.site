@@ -1,7 +1,6 @@
 ---
 import Frameworks from "../storage/frameworks.json";
 import Languages from "../storage/languages.json";
-import SkillsImgs from "../components/SkillsImgs";
 
 //
 const { texts } = Astro.props;
@@ -23,7 +22,7 @@ const { texts } = Astro.props;
           Languages.map((item) => (
             <li class="inline-block">
               <div>
-                <SkillsImgs name={item.name} image={item.image} client:load />
+                
               </div>
             </li>
           ))
@@ -46,7 +45,7 @@ const { texts } = Astro.props;
         {
           Frameworks.map((item) => (
             <li class="inline-block">
-              <SkillsImgs name={item.name} image={item.image} client:load />
+             
             </li>
           ))
         }

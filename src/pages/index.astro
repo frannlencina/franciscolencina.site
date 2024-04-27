@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import Frameworks from "../storage/frameworks.json";
+import Languages from "../storage/languages.json";
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
@@ -193,14 +196,36 @@ import Layout from "../layouts/Layout.astro";
 			<section class="max-w-[830px] mx-auto" id="Skills">
 				<div>
 					<h5 class="text-white font-medium text-xl">Stack</h5>
-					<div>
-						<!-- Lista de logos de las tecnologias que utilizo. -->
+					<div class="flex gap-4  mt-8 pb-32">
+						{
+							Languages.map((item) => (
+								<div>
+									<img
+										class="h-14 w-full rounded-xl"
+										src={item.image}
+										alt=""
+										srcset=""
+									/>
+								</div>
+							))
+						}
 					</div>
 				</div>
 				<div>
 					<h5 class="text-white font-medium text-xl">Herramientas</h5>
-					<div>
-						<!-- Lista de logos de herramientas adicionales que utilizo. -->
+					<div class="flex gap-4 mt-8 pb-32">
+						{
+							Frameworks.map((item) => (
+								<div>
+									<img
+										class="h-14 w-full rounded-xl"
+										src={item.image}
+										alt=""
+										srcset=""
+									/>
+								</div>
+							))
+						}
 					</div>
 				</div>
 			</section>

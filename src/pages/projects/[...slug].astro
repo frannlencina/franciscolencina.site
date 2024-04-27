@@ -1,7 +1,6 @@
 ---
 import Post from "../../layouts/Post.astro";
 import jsonData from "../../storage/projects.json";
-import Slider from "../../components/Slider";
 
 const pages = jsonData;
 const { slug } = Astro.params;
@@ -21,7 +20,6 @@ const { title, description, image, about, techSpecs, website, screens, tech } = 
     >
         {title}
     </h1>
-    <Slider screens={screens} client:load />
 
     <div class="flex mx-auto max-w-2xl justify-between items-center px-5">
         <a
