@@ -1,13 +1,8 @@
 ---
-import Footer from '../components/Footer.astro';
+import Footer from "../components/Footer.astro";
 
-export interface Props {
-	title: string;
-	description: string;
-	image: string;
-}
-
-const { title, description, image } = Astro.props;
+const { frontmatter } = Astro.props;
+const { author, title, description, date, read, image, website } = frontmatter;
 ---
 
 <!DOCTYPE html>
@@ -28,22 +23,63 @@ const { title, description, image } = Astro.props;
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content={image} />
-		<meta property="og:image:secure_url" content={image} /> 
-		<meta property="og:image:type" content="image/png" /> 
-		<meta property="og:image:width" content="400" /> 
+		<meta property="og:image:secure_url" content={image} />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="400" />
 		<meta property="og:image:height" content="300" />
 		<meta name="generator" content={Astro.generator} />
-		
-		<link rel="manifest" href="../../manifest.json">
-		
+
+		<link rel="manifest" href="../../manifest.json" />
+
 		<title>{title}</title>
 	</head>
 	<body class="duration-300">
-		
-		<main class="container max-w-3xl mx-auto h-fit dark:text-white">
+		<main class="container max-w-3xl mx-auto h-fit">
+			<section class="mt-24">
+				<div
+					class="flex mx-auto max-w-2xl justify-between items-center px-5 pb-24"
+				>
+					<a
+						class="flex gap-2 mt-4 px-3 py-1 rounded-xl font-regular border border-stone-200 text-lg bg-transparent opacity-50 hover:opacity-100 trainsition-all duration-200"
+						href="/"
+					>
+						<i class="ri-arrow-left-s-line"></i> Volver</a
+					>
+
+					<a
+						class="flex gap-2 mt-4 px-5 py-2 font-medium text-white text-[var(--blue-dark)] rounded-md transition-all duration-200 opacity-50 hover:opacity-100 dark:text-white"
+						href={website}
+						target="__blank"
+					>
+						<i class="ri-movie-line dark:text-white"></i>
+						<span
+							class="inline-block h-[2] min-h-[1em] w-0.5 self-stretch bg-[var(--blue-dark)]"
+						>
+						</span> Ver Demo
+					</a>
+				</div>
+				<div class="flex items-center gap-2">
+					<div>
+						<img
+							class="w-10 rounded-full"
+							src="/yo-imagen.png"
+							alt=""
+						/>
+					</div>
+					<div class="flex flex-col">
+						<span class="font-regular opacity-50 relative top-1"
+							>20y</span
+						>
+						<span class="font-bold opacity-85"
+							>Francisco Lencina</span
+						>
+					</div>
+				</div>
+			</section>
+			<span class="font-light opacity-30">{date} • {read}</span>
 			<slot />
 		</main>
-		<Footer/>
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -77,12 +113,88 @@ const { title, description, image } = Astro.props;
 			rgba(52, 80, 164, 1) 60%
 		);
 	}
-	html {
+
+	body {
+		background-color: #181818;
+	}
+
+	main {
 		font-family: system-ui, sans-serif;
 		scroll-behavior: smooth;
-		background-color: #f6f6f6;
+		color: #a3a3a3;
+
+		font-size: 1.1em;
+	}
+
+	/* Estilos basicos para elementos HTML a partir de contenido Markdown */
+
+	/* Tamaños y pesos de texto */
+	h1 {
+		font-size: 2.5em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h2 {
+		font-size: 2em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h3 {
+		font-size: 1.5em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h4 {
+		font-size: 1.2em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h5 {
+		font-size: 1em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h6 {
+		font-size: 0.8em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+
+	/* Pesos de texto */
+
+	strong {
+		font-weight: bold;
+	}
+	em {
+		font-style: italic;
+	}
+
+	/* Estilos de listas */
+
+	ul {
+		list-style: disc;
+	}
+	ol {
+		list-style: decimal;
+	}
+
+	ul,
+	ol {
+		margin: 20px 0px 20px 0px;
+		margin-left: 30px;
+	}
+	li {
+		margin-bottom: 5px;
+	}
+
+	/* Estilos de enlaces */
+	a {
+		color: #a3a3a3;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
 	}
 </style>
-<script>
-	
-</script>
+<script></script>
