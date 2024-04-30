@@ -2,11 +2,11 @@
 layout: "../../layouts/Post.astro"
 title: "LetrasSinFiltro"
 description: ""
-website: ""
+website: "https://letrassinfiltro.vercel.app/"
 date: "Apr 26,  2024"
 read: "2 min read"
 author: "Francisco Lencina"
-authorImage: ""
+authorImage: "https://res.cloudinary.com/dctldwa03/image/upload/v1714420331/t3aw607pugwj6ynp5lzd.png"
 ---
 
 # LetrasSinFiltro

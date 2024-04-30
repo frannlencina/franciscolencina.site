@@ -1,8 +1,10 @@
 ---
 import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 
 const { frontmatter } = Astro.props;
-const { author, title, description, date, read, image, website } = frontmatter;
+const { author, authorImage, title, description, date, read, image, website } = frontmatter;
+
 ---
 
 <!DOCTYPE html>
@@ -31,7 +33,9 @@ const { author, title, description, date, read, image, website } = frontmatter;
 
 		<link rel="manifest" href="../../manifest.json" />
 
-		<title>{title}</title>
+		<title>Proyecto {title}</title>
+
+		<ViewTransitions />
 	</head>
 	<body class="duration-300">
 		<main class="container max-w-3xl mx-auto h-fit">
@@ -55,14 +59,14 @@ const { author, title, description, date, read, image, website } = frontmatter;
 						<span
 							class="inline-block h-[2] min-h-[1em] w-0.5 self-stretch bg-[var(--blue-dark)]"
 						>
-						</span> Ver Demo
+						</span> Ver pagina
 					</a>
 				</div>
 				<div class="flex items-center gap-2">
 					<div>
 						<img
 							class="w-10 rounded-full"
-							src="/yo-imagen.png"
+							src={authorImage}
 							alt=""
 						/>
 					</div>
