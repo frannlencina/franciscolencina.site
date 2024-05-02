@@ -2,7 +2,7 @@
 layout: "../../layouts/Post.astro"
 title: "SafePvP"
 description: "SafePvP es la pagina oficial sobre un ex servidor de un videojuego."
-website: "https://letrassinfiltro.vercel.app/"
+website: "https://safepvp.000webhostapp.com/"
 date: "Apr 26,  2024"
 read: "2 min read"
 author: "Francisco Lencina"
