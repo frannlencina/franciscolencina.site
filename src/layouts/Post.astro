@@ -4,9 +4,7 @@ import { ViewTransitions } from "astro:transitions";
 
 const { frontmatter } = Astro.props;
 const { author, authorImage, title, description, date, read, image, website } = frontmatter;
-
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -38,10 +36,10 @@ const { author, authorImage, title, description, date, read, image, website } = 
 		<ViewTransitions />
 	</head>
 	<body class="duration-300">
-		<main class="container max-w-3xl mx-auto h-fit">
-			<section class="mt-24">
+		<main class="container max-w-3xl mx-auto h-fit p-6">
+			<section class="mt-24 mb-12">
 				<div
-					class="flex mx-auto max-w-2xl justify-between items-center px-5 pb-24"
+					class="flex flex-col sm:flex-row mx-auto max-w-2xl justify-between items-center px-5 pb-24"
 				>
 					<a
 						class="flex gap-2 mt-4 px-3 py-1 rounded-xl font-regular border border-stone-200 text-lg bg-transparent opacity-50 hover:opacity-100 trainsition-all duration-200"
@@ -79,126 +77,11 @@ const { author, authorImage, title, description, date, read, image, website } = 
 						>
 					</div>
 				</div>
+				<span class="font-light opacity-30">{date} • {read}</span>
 			</section>
-			<span class="font-light opacity-30">{date} • {read}</span>
+			<!-- Slug page render -->
 			<slot />
 		</main>
 		<Footer />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--blue: #3450a2;
-		--blue-pastel: #5f75b6;
-		--blue-dark: #272d40;
-		--blue-deep: #141825;
-		--black: rgba(46, 46, 46, 1);
-		--blue-white: linear-gradient(
-			90deg,
-			#3450a2 10.77%,
-			#cfcfcf 82.04%,
-			#ffffff 97.06%
-		);
-		--white-blue: linear-gradient(
-			270.05deg,
-			#3450a4 -5.55%,
-			#ffffff 110.25%
-		);
-		--blue-gradient: linear-gradient(
-			90deg,
-			rgba(52, 80, 164, 1) 0%,
-			rgba(46, 46, 46, 1) 20%,
-			rgba(46, 46, 46, 1) 60%
-		);
-		--black-gradient: linear-gradient(
-			90deg,
-			rgba(46, 46, 46, 1) 0%,
-			rgba(52, 80, 164, 1) 10%,
-			rgba(52, 80, 164, 1) 60%
-		);
-	}
-
-	body {
-		background-color: #181818;
-	}
-
-	main {
-		font-family: system-ui, sans-serif;
-		scroll-behavior: smooth;
-		color: #a3a3a3;
-
-		font-size: 1.1em;
-	}
-
-	/* Estilos basicos para elementos HTML a partir de contenido Markdown */
-
-	/* Tamaños y pesos de texto */
-	h1 {
-		font-size: 2.5em;
-		font-weight: bold;
-		color: #cbccd0;
-	}
-	h2 {
-		font-size: 2em;
-		font-weight: bold;
-		color: #cbccd0;
-	}
-	h3 {
-		font-size: 1.5em;
-		font-weight: bold;
-		color: #cbccd0;
-	}
-	h4 {
-		font-size: 1.2em;
-		font-weight: bold;
-		color: #cbccd0;
-	}
-	h5 {
-		font-size: 1em;
-		font-weight: bold;
-		color: #cbccd0;
-	}
-	h6 {
-		font-size: 0.8em;
-		font-weight: bold;
-		color: #cbccd0;
-	}
-
-	/* Pesos de texto */
-
-	strong {
-		font-weight: bold;
-	}
-	em {
-		font-style: italic;
-	}
-
-	/* Estilos de listas */
-
-	ul {
-		list-style: disc;
-	}
-	ol {
-		list-style: decimal;
-	}
-
-	ul,
-	ol {
-		margin: 20px 0px 20px 0px;
-		margin-left: 30px;
-	}
-	li {
-		margin-bottom: 5px;
-	}
-
-	/* Estilos de enlaces */
-	a {
-		color: #a3a3a3;
-		text-decoration: none;
-	}
-
-	a:hover {
-		text-decoration: underline;
-	}
-</style>
-<script></script>

@@ -1,0 +1,113 @@
+---
+import { getCollection } from "astro:content";
+
+
+export async function getStaticPaths() {
+    const projectsEntries = await getCollection("projects");
+    return projectsEntries.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
+}
+
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Content />
+<style is:global>
+	body {
+		background-color: #181818;
+	}
+
+	main {
+		font-family: system-ui, sans-serif;
+		scroll-behavior: smooth;
+		color: #a3a3a3;
+
+		font-size: 1.1em;
+	}
+
+	/* Estilos basicos para elementos HTML a partir de contenido Markdown */
+
+	/* Tamaños y pesos de texto */
+	h1 {
+		font-size: 2.5em;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h2 {
+		font-size: 2em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h3 {
+		font-size: 1.5em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h4 {
+		font-size: 1.2em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h5 {
+		font-size: 1em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+	h6 {
+		font-size: 0.8em;
+		font-weight: bold;
+		color: #cbccd0;
+	}
+
+	/* Pesos de texto */
+
+	strong {
+		font-weight: bold;
+	}
+	em {
+		font-style: italic;
+	}
+
+	/* Estilos de listas */
+
+	ul {
+		list-style: disc;
+	}
+	ol {
+		list-style: decimal;
+	}
+
+	ul,
+	ol {
+		margin: 20px 0px 20px 0px;
+		margin-left: 30px;
+	}
+	li {
+		margin-bottom: 5px;
+	}
+
+	p {
+		margin: 10px 0px 10px;
+	}
+
+	/* Estilos de enlaces */
+	a {
+		color: #a3a3a3;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	img {
+		max-height: 400px;
+		border-radius: 20px;
+	}
+</style>
