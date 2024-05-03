@@ -5,8 +5,9 @@ import Frameworks from "../storage/frameworks.json";
 import Languages from "../storage/languages.json";
 
 import { getCollection } from "astro:content";
-
 const projectsEntries = await getCollection("projects");
+
+import StatusActivity from '../components/StatusActivity'
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
@@ -63,14 +64,7 @@ const projectsEntries = await getCollection("projects");
 					</div>
 				</div>
 				<div>
-					<div class="flex flex-col relative left-28 top-6">
-						<span class="font-bold text-[#A9B5C1]">ahora</span>
-						<span
-							class="flex items-center w-fit cursor-pointer select-none hover:scale-[1.01] transition-all duration-200 hover:skew-y-2 hover:ring-4 hover:ring-[#A9B5C1] px-4 py-2 rounded-2xl text-[#414141] bg-[#CBCCD0]"
-							>Escuchando Spotify <i class="ri-arrow-right-s-line"
-							></i></span
-						>
-					</div>
+					<StatusActivity client:load />
 					<img src="/yo-imagen.png" alt="Imagen  de Francisco" />
 				</div>
 			</div>
