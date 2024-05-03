@@ -13,9 +13,9 @@ import StatusActivity from '../components/StatusActivity'
 <Layout title="Francisco Lencina : Portfolio">
 	<main class="w-full m-0">
 		<!-- PROFILE SECTION -->
-		<section class="flex justify-between w-full" id="Profile">
+		<section class="flex justify-between w-full p-6 mx-auto" id="Profile">
 			<div
-				class="flex items-center justify-between gap-8 max-w-[830px] mx-auto mt-48"
+				class="flex flex-col-reverse sm:flex-row items-center justify-between gap-8 max-w-[830px] mx-auto mt-48"
 			>
 				<div class="max-w-md">
 					<div class="flex flex-col">
@@ -26,19 +26,15 @@ import StatusActivity from '../components/StatusActivity'
 							Soy Francisco
 						</h1>
 						<p
-							class="text-white text-lg font-regular opacity-60 mt-4"
+							class="text-start text-white text-md sm:text-lg font-regular opacity-60 mt-4"
 						>
 							Tengo 19 años, vivo en Uruguay y soy Front End
 							Developer. Autodidacta, apasionado por la tecnologia
 							y el como esta desarrollada. Actualmente estudiando
 							Tecnologo en Informatica.
 						</p>
-						<button
-							class="border-b outline-b-indigo-50 mt-2 mb-6 text-white font-['Fira_Code'] w-fit"
-							>Leer mas</button
-						>
 					</div>
-					<div class="flex gap-4 ml-4 my-5">
+					<div class="flex justify-center items-center sm:justify-start  gap-4 ml-4 my-5">
 						<a download target="_blank" href="/francisco-lencina-curriculum.pdf" class="px-4 py-2 text-white text-opacity-90 font-semibold border border-[#737373] rounded-lg bg-gradient-to-t from-[#0B0B0B] to-[#212121]" >Descargar CV</a>
 						<div
 							class="flex text-white opacity-50 justify-center items-center gap-2 text-2xl"
@@ -70,14 +66,14 @@ import StatusActivity from '../components/StatusActivity'
 			</div>
 		</section>
 
-		<section class="bg-[#181818] w-full">
+		<section class="bg-[#181818] w-full p-6">
 			<section
 				class="max-w-[830px] mt-56 mx-auto relative -top-28"
 				id="Proyectos"
 			>
 				<h4 class="text-white font-medium text-xl">Proyectos</h4>
 
-				<div class="grid grid-cols-2 gap-4 mt-8">
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
 					{
 						projectsEntries.map((item) => (
 							<article class="group flex text-white border border-[#3A3A3A] hover:border-[#585858] hover:scale-[1.01] bg-[#242424] px-6 py-4 rounded-xl cursor-pointer transition-all duration-200">
@@ -110,10 +106,10 @@ import StatusActivity from '../components/StatusActivity'
 			<section class="max-w-[830px] mx-auto" id="Skills">
 				<div>
 					<h5 class="text-white font-medium text-xl">Stack</h5>
-					<div class="flex gap-4 mt-8 pb-32">
+					<div class="grid grid-cols-4 sm:flex sm:gap-4 mt-8 pb-32">
 						{
 							Languages.map((item) => (
-								<div>
+								<div class="max-w-12">
 									<img
 										class="h-14 w-full rounded-xl"
 										src={item.image}
@@ -127,10 +123,10 @@ import StatusActivity from '../components/StatusActivity'
 				</div>
 				<div>
 					<h5 class="text-white font-medium text-xl">Herramientas</h5>
-					<div class="flex gap-4 mt-8 pb-32">
+					<div class="grid grid-cols-4 sm:flex sm:gap-4 mt-8 pb-32 mx-auto">
 						{
 							Frameworks.map((item) => (
-								<div>
+								<div class="max-w-12">
 									<img
 										class="h-14 w-full rounded-xl"
 										src={item.image}
