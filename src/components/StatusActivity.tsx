@@ -1,19 +1,18 @@
 import { useEffect, useState } from 'react';
 
-import ActivityStatus from '../utils/activity-status';
-
 export default function StatusActivity() {
 
+    const PUBLIC_ACTIVITY_URL = import.meta.env.PUBLIC_ACTIVITY_URL;
     const [activity, setActivity] = useState({});
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await ActivityStatus();
-                setActivity(res);
-                console.log('App running...');
-            } catch (err) {
-                console.error('Error on activity status', err);
+                const reponse = await fetch(PUBLIC_ACTIVITY_URL).then((response) =>
+                    response.json())
+                setActivity(reponse)
+            } catch {
+                console.log('Error en la solicitud');
             }
         };
 
@@ -30,7 +29,7 @@ export default function StatusActivity() {
                 <i className="ri-arrow-right-s-line"></i>
 
             </div>
-        
+
         </div>
     );
 }
