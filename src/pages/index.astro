@@ -7,7 +7,9 @@ import Languages from "../storage/languages.json";
 import { getCollection } from "astro:content";
 const projectsEntries = await getCollection("projects");
 
-import StatusActivity from '../components/StatusActivity'
+import StatusActivity from "../components/StatusActivity";
+
+import Tooltip from "../components/Tooltip";
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
@@ -34,8 +36,16 @@ import StatusActivity from '../components/StatusActivity'
 							Tecnologo en Informatica.
 						</p>
 					</div>
-					<div class="flex justify-center items-center sm:justify-start  gap-4 ml-4 my-5">
-						<a download target="_blank" href="/francisco-lencina-curriculum.pdf" class="px-4 py-2 text-white text-opacity-90 font-semibold border border-[#737373] rounded-lg bg-gradient-to-t from-[#0B0B0B] to-[#212121]" >Descargar CV</a>
+					<div
+						class="flex justify-center items-center sm:justify-start gap-4 ml-4 my-5"
+					>
+						<a
+							download
+							target="_blank"
+							href="/francisco-lencina-curriculum.pdf"
+							class="px-4 py-2 text-white text-opacity-90 font-semibold border border-[#737373] rounded-lg bg-gradient-to-t from-[#0B0B0B] to-[#212121]"
+							>Descargar CV</a
+						>
 						<div
 							class="flex text-white opacity-50 justify-center items-center gap-2 text-2xl"
 						>
@@ -90,9 +100,7 @@ import StatusActivity from '../components/StatusActivity'
 											</div>
 
 											<div class="flex justify-end items-end text-start mt-12">
-												
-													<i class="ri-arrow-right-line opacity-70" />
-												
+												<i class="ri-arrow-right-line opacity-70" />
 											</div>
 										</div>
 									</div>
@@ -106,16 +114,23 @@ import StatusActivity from '../components/StatusActivity'
 			<section class="max-w-[830px] mx-auto" id="Skills">
 				<div>
 					<h5 class="text-white font-medium text-xl">Stack</h5>
-					<div class="grid grid-cols-4 sm:flex sm:gap-4 mt-8 pb-32">
+					<div
+						class="grid grid-cols-2 sm:grid sm:grid-cols-4 sm:gap-4 lg:grid-cols-6 sm:gap-4 mt-8 pb-32 items-center"
+					>
 						{
 							Languages.map((item) => (
-								<div class="max-w-12">
-									<img
-										class="h-14 w-full rounded-xl"
-										src={item.image}
-										alt=""
-										srcset=""
-									/>
+								<div class="group flex flex-col items-center justify-center">
+									<div class="group-hover:opacity-100 opacity-0 transition-all duration-100 ">
+										<Tooltip text={item.name} />
+									</div>
+									<div class="max-w-14 hover:scale-125">
+										<img
+											class="w-full h-auto rounded-xl"
+											src={item.image}
+											alt=""
+											srcset=""
+										/>
+									</div>
 								</div>
 							))
 						}
@@ -123,16 +138,23 @@ import StatusActivity from '../components/StatusActivity'
 				</div>
 				<div>
 					<h5 class="text-white font-medium text-xl">Herramientas</h5>
-					<div class="grid grid-cols-4 sm:flex sm:gap-4 mt-8 pb-32 mx-auto">
+					<div
+						class="grid grid-cols-2 sm:grid sm:grid-cols-4 sm:gap-4 lg:grid-cols-6 mt-8 pb-32 mx-auto items-center"
+					>
 						{
 							Frameworks.map((item) => (
-								<div class="max-w-12">
-									<img
-										class="h-14 w-full rounded-xl"
-										src={item.image}
-										alt=""
-										srcset=""
-									/>
+							<div class="group flex flex-col items-center justify-center">
+									<div class="group-hover:opacity-100 opacity-0 transition-all duration-100 ">
+										<Tooltip text={item.name} />
+									</div>
+									<div class="max-w-14 hover:scale-125">
+										<img
+											class="w-full h-auto rounded-xl"
+											src={item.image}
+											alt=""
+											srcset=""
+										/>
+									</div>
 								</div>
 							))
 						}
