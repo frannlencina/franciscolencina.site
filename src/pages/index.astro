@@ -8,6 +8,8 @@ import { getCollection } from "astro:content";
 const projectsEntries = await getCollection("projects");
 
 import StatusActivity from '../components/StatusActivity'
+
+import ThemeMdsbtn from "../components/ThemeMdsBtn";
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
@@ -65,7 +67,6 @@ import StatusActivity from '../components/StatusActivity'
 				</div>
 			</div>
 		</section>
-
 		<section class="bg-[#181818] w-full p-6">
 			<section
 				class="max-w-[830px] mt-56 mx-auto relative -top-28"
