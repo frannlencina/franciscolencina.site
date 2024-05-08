@@ -1,6 +1,7 @@
 ---
-import HearthEmoji from "../assets/imgs/HearthEmoji.png";
+import ThemeMdsbtn from '../components/ThemeMdsBtn';
 
+import HearthEmoji from "../assets/imgs/HearthEmoji.png";
 const defaultStyle = "opacity-40 hover:opacity-100";
 ---
 
@@ -37,15 +38,7 @@ const defaultStyle = "opacity-40 hover:opacity-100";
             </div>
 
             <div class="flex items-end gap-2 text-xl">
-                <button class="opacity-40 hover:opacity-100"
-                    ><i class="ri-moon-line"></i></button
-                >
-                <button class="opacity-40 hover:opacity-100">
-                    <i class="ri-sun-line"></i></button
-                >
-                <button class="opacity-40 hover:opacity-100">
-                    <i class="ri-computer-line"></i></button
-                >
+                <ThemeMdsbtn client:only/>
             </div>
         </div>
         <div

@@ -1,4 +1,6 @@
 ---
+import StatusActivity from "../components/StatusActivity";
+import Tooltip from "../components/Tooltip";
 import Layout from "../layouts/Layout.astro";
 
 import Frameworks from "../storage/frameworks.json";
@@ -6,10 +8,6 @@ import Languages from "../storage/languages.json";
 
 import { getCollection } from "astro:content";
 const projectsEntries = await getCollection("projects");
-
-import StatusActivity from "../components/StatusActivity";
-
-import Tooltip from "../components/Tooltip";
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
@@ -75,7 +73,6 @@ import Tooltip from "../components/Tooltip";
 				</div>
 			</div>
 		</section>
-
 		<section class="bg-[#181818] w-full p-6">
 			<section
 				class="max-w-[830px] mt-56 mx-auto relative -top-28"
@@ -115,7 +112,7 @@ import Tooltip from "../components/Tooltip";
 				<div>
 					<h5 class="text-white font-medium text-xl">Stack</h5>
 					<div
-						class="grid grid-cols-2 sm:grid sm:grid-cols-4 sm:gap-4 lg:grid-cols-6 sm:gap-4 mt-8 pb-32 items-center"
+						class="grid grid-cols-2 sm:grid sm:grid-cols-4 lg:grid-cols-6 sm:gap-4 mt-8 pb-32 items-center"
 					>
 						{
 							Languages.map((item) => (
