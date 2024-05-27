@@ -44,21 +44,21 @@ export default function StatusActivity() {
             {
                 showModal ?
                     <div className='fixed z-20 bg-black bg-opacity-80 left-0 top-0 w-screen h-screen'>
-                        <div className='absolute px-6 py-4 z-30 left-[30%] md:left-[40%] top-[30%] m-6  min-w-[200px] bg-[#e9e9e9] rounded-xl shadow-xl'>
+                        <div className='absolute px-6 py-4 z-30 left-[30%] md:left-[40%] top-[30%] m-6  sm:min-w-[200px] bg-[#e9e9e9] rounded-xl shadow-xl'>
                             <h4 className='text-sm sm:text-lg text-black opacity-80 font-black'>Aplicaciones que estoy utilizando</h4>
                             <div className='flex flex-col gap-2'>
                                 {
                                     activity.data.activities.map((item, key) => (
                                         <div key={key} className=' select-none my-2'>
                                             <p className='text-sm sm:text-base font-medium text-blakc opacity-80 hover:text-[#6c9fcf] cursor-pointer'> <i className="ri-map-pin-3-line"></i> {item.name}</p>
-                                            <p className='text-xs sm:text-sm font-medium text-black opacity-65 ml-4'>{item.details && <div className='text-xs sm:text-sm flex items-center'>detalles <i className="ri-arrow-drop-right-line"></i> {item.details}</div>}</p>
+                                            <p className='text-xs sm:text-sm font-medium text-black opacity-65 ml-4'>{item.details && <div className='text-xs sm:text-sm flex items-start sm:items-center flex-col sm:flex-row'><span className='font-bold'>detalles</span> <i className="text-black ri-arrow-drop-right-line hidden sm:block"></i> {item.details}</div>}</p>
                                         </div>
                                     ))
                                 }
                             </div>
                             <hr className='bg-black h-[3px] opacity-5 rounded-full my-4' />
                             <div className='flex flex-col text-xs opacity-50 max-w-xs gap-2 mt-4'>
-                                <p>Dicha actividad es rastreada con <a className='font-bold hover:text-[#2b5072]' href="https://api.lanyard.rest/v1/users/634861383401472020" target='_blank'>Lanyard API</a>.  </p>
+                                <p>Dicha actividad es rastreada con <a className='font-bold hover:text-[#2b5072]' href="https://github.com/Phineas/lanyard" target='_blank'>Lanyard API</a>.  </p>
                                 <p className='opacity-60'>Si no se muestra el badge de actividad es porque no esta activado en mi PC o no tengo la PC prendida.</p>
                             </div>
 
