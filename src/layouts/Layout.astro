@@ -50,29 +50,47 @@ const { title } = Astro.props;
 
 		<ViewTransitions />
 	</head>
-	<body class="duration-300 bg-[#181818]">
+	<body class=`duration-300 bg-[#181818]`>
 		<slot />
 		<Footer />
 	</body>
-</html>
-<style is:global>
-	@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
-	@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
-	@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
-	html {
-		font-family: "Onest", system-ui, sans-serif;
-		scroll-behavior: smooth;
-	}
+	<style is:global>
+		@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+		@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+		@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
+		@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+		html {
+			font-family: "Onest", system-ui, sans-serif;
+			scroll-behavior: smooth;
+		}
 
-	body {
-		background: radial-gradient(
-			50% 50% at 50% 50%,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(0, 0, 0, 0.1) 50%,
-			rgba(0, 0, 0, 0.5) 100%
-		);
-		background-color: #181818;
-	}
-</style>
-<script></script>
+		body {
+			background: radial-gradient(
+				50% 50% at 50% 50%,
+				rgba(0, 0, 0, 0) 0%,
+				rgba(0, 0, 0, 0.1) 50%,
+				rgba(0, 0, 0, 0.5) 100%
+			);
+			background-color: #181818;
+		}
+	</style>
+	<script is:inline>
+		const applyTheme = (mode) => {
+			if (mode === "system") {
+				const prefersDark = window.matchMedia(
+					"(prefers-color-scheme: dark)"
+				).matches;
+				document.documentElement.className = prefersDark
+					? "dark"
+					: "light";
+			} else {
+				document.documentElement.className = mode;
+			}
+		};
+
+		window.addEventListener("DOMContentLoaded", () => {
+			const initialMode = localStorage.getItem("theme") || "system";
+			applyTheme(initialMode);
+		});
+	</script>
+</html>

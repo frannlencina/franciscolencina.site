@@ -2,7 +2,7 @@
 layout: "../../layouts/Post.astro"
 title: "FraintStudio"
 description: "Fraint Studio es un studio donde personas con emprendimientos pueden comprar paginas ya diseñadas y elaboradas para usar, tambien podiendo cotizar gratuitamente una aplicaciones ajustada a sus necesidades"
-website: ""
+website: "https://fraint-studio.deno.dev/"
 date: "Apr 26,  2024"
 read: "2 min lectura"
 author: "Francisco Lencina"
