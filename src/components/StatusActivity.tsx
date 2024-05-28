@@ -67,8 +67,8 @@ export default function StatusActivity() {
                     : ''
             }
             <div className='relative flex flex-col z-30'>
-                <span className='text-[#A9B5C1] font-bold relative right-3'>ahora</span>
-                <div onClick={() => { setShowModal(!showModal) }} className='flex bg-[#cbd0cb] px-4 py-2 w-fit rounded-xl text-stone-700 select-none cursor-pointer hover:scale-[1.01] transition-all duration-200 hover:skew-y-2 hover:ring-4 hover:ring-[#A9B5C1]'>
+                <span className='text-[#4F575F] dark:text-[#A9B5C1] font-bold relative right-3'>ahora</span>
+                <div onClick={() => { setShowModal(!showModal) }} className='flex bg-[#EDEDED] dark:bg-[#cbd0cb] px-4 py-2 w-fit rounded-xl text-stone-700 select-none cursor-pointer hover:scale-[1.01] transition-all duration-200 hover:skew-y-2 hover:ring-4 hover:ring-[#A9B5C1]'>
 
                     <span>Estoy en {activity && activity.data && activity.data.activities[0].name}</span>
                     <i className="ri-arrow-right-s-line"></i>

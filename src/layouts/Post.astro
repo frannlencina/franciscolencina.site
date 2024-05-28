@@ -1,66 +1,39 @@
 ---
+import Layout from "./Layout.astro";
+
 import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
 
 const { frontmatter } = Astro.props;
-const { author, authorImage, title, description, date, read, image, website } = frontmatter;
+const { author, authorImage, title, description, date, read, image, website } =
+	frontmatter;
 ---
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta
-			name="Portfolio"
-			content="Author:Francisco Lencina, Category: Portfolio, Blog. Resume: Esta es la pagina de mis proyectos donde muestro con que estan echos a detalle."
-		/>
-		<meta name="theme-color" content="#317EFB" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
-			rel="stylesheet"
-		/>
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={image} />
-		<meta property="og:image:secure_url" content={image} />
-		<meta property="og:image:type" content="image/png" />
-		<meta property="og:image:width" content="400" />
-		<meta property="og:image:height" content="300" />
-		<meta name="generator" content={Astro.generator} />
-
-		<link rel="manifest" href="../../manifest.json" />
-
-		<title>Proyecto {title}</title>
-
-		<ViewTransitions />
-	</head>
-	<body class="duration-300 bg-[#181818]">
-		<main class="container max-w-3xl mx-auto h-fit p-6">
-			<section class="mt-24 mb-12">
+<Layout title=`Proyecto ${title}`>
+	<div class="duration-300 bg-[#E2E2E2] dark:bg-[#181818]">
+		<div class="container max-w-3xl mx-auto h-fit p-6">
+			<section class="mt-24 mb-12 text-black dark:text-white">
 				<div
 					class="flex flex-col sm:flex-row mx-auto max-w-2xl justify-between items-center px-5 pb-24"
 				>
 					<a
-						class="flex gap-2 mt-4 px-3 py-1 rounded-xl font-regular border border-stone-200 text-lg bg-transparent opacity-50 hover:opacity-100 trainsition-all duration-200"
+						class="flex gap-2 mt-4 px-3 py-1 rounded-xl font-regular border border-stone-400 dark:border-stone-200 text-lg bg-transparent opacity-50 hover:opacity-100 trainsition-all duration-200"
 						href="/"
 					>
 						<i class="ri-arrow-left-s-line"></i> Volver</a
 					>
 
 					<a
-						class="flex gap-2 mt-4 px-5 py-2 font-medium text-white text-[var(--blue-dark)] rounded-md transition-all duration-200 opacity-50 hover:opacity-100 dark:text-white"
+						class="flex gap-2 mt-4 px-5 py-2 font-medium text-black text-[var(--blue-dark)] rounded-md transition-all duration-200 opacity-50 hover:opacity-100 dark:text-white"
 						href={website}
 						target="_blank"
 					>
-						<i class="ri-movie-line dark:text-white"></i>
+						<i class="ri-movie-line text-black dark:text-white"></i>
 						<span
 							class="inline-block h-[2] min-h-[1em] w-0.5 self-stretch bg-[var(--blue-dark)]"
 						>
 						</span> Ver pagina
 					</a>
 				</div>
-				<div class="flex items-center gap-2">
+				<div class="flex items-center gap-2 dark:text-white">
 					<div>
 						<img
 							class="w-10 rounded-full"
@@ -77,11 +50,10 @@ const { author, authorImage, title, description, date, read, image, website } = 
 						>
 					</div>
 				</div>
-				<span class="font-light opacity-30">{date} • {read}</span>
+				<span class="font-light opacity-30 dark:text-white">{date} • {read}</span>
 			</section>
 			<!-- Slug page render -->
 			<slot />
-		</main>
-		<Footer />
-	</body>
-</html>
+		</div> 
+	</div>
+</Layout>

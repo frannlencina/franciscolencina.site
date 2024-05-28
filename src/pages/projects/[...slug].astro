@@ -17,9 +17,6 @@ const { Content } = await entry.render();
 
 <Content />
 <style is:global>
-	body {
-		background-color: #181818;
-	}
 
 	main {
 		font-family: system-ui, sans-serif;
@@ -28,38 +25,88 @@ const { Content } = await entry.render();
 
 		font-size: 1.1em;
 	}
+	
 
 	/* Estilos basicos para elementos HTML a partir de contenido Markdown */
 
-	/* Tamaños y pesos de texto */
-	h1 {
+	 p {
+		color: #5A5A5A;
+	}
+
+	 li {
+		color: #5A5A5A;
+	}
+
+	 h1 {
+		font-size: 2.5em;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		font-weight: bold;
+		color: #5A5A5A;
+	}
+	 h2 {
+		font-size: 2em;
+		font-weight: bold;
+		color: #5A5A5A;
+	}
+	 h3 {
+		font-size: 1.5em;
+		font-weight: bold;
+		color: #5A5A5A;
+	}
+	 h4 {
+		font-size: 1.2em;
+		font-weight: bold;
+		color: #5A5A5A;
+	}
+	 h5 {
+		font-size: 1em;
+		font-weight: bold;
+		color: #5A5A5A;
+	}
+	 h6 {
+		font-size: 0.8em;
+		font-weight: bold;
+		color: #5A5A5A;
+	}
+
+	/* Tamaños y pesos de texto en Dark Mode */
+	html.dark p {
+		color: #acadb1;
+	}
+
+	html.dark li {
+		color: #acadb1;
+	}
+
+	html.dark h1 {
 		font-size: 2.5em;
 		margin-top: 30px;
 		margin-bottom: 20px;
 		font-weight: bold;
 		color: #cbccd0;
 	}
-	h2 {
+	html.dark h2 {
 		font-size: 2em;
 		font-weight: bold;
 		color: #cbccd0;
 	}
-	h3 {
+	html.dark h3 {
 		font-size: 1.5em;
 		font-weight: bold;
 		color: #cbccd0;
 	}
-	h4 {
+	html.dark h4 {
 		font-size: 1.2em;
 		font-weight: bold;
 		color: #cbccd0;
 	}
-	h5 {
+	html.dark h5 {
 		font-size: 1em;
 		font-weight: bold;
 		color: #cbccd0;
 	}
-	h6 {
+	html.dark h6 {
 		font-size: 0.8em;
 		font-weight: bold;
 		color: #cbccd0;
