@@ -59,7 +59,7 @@ export default function StatusActivity() {
                             <hr className='bg-black h-[3px] opacity-5 rounded-full my-4' />
                             <div className='flex flex-col text-xs opacity-50 max-w-xs gap-2 mt-4'>
                                 <p>Dicha actividad es rastreada con <a className='font-bold hover:text-[#2b5072]' href="https://github.com/Phineas/lanyard" target='_blank'>Lanyard API</a>.  </p>
-                                <p className='opacity-60'>Si no se muestra el badge de actividad es porque no esta activado en mi PC o no tengo la PC prendida.</p>
+                                <p className='opacity-60'>Si no se muestra el badge de actividad, es porque no está activado en mi PC o no tengo la PC encendida.</p>
                             </div>
 
                         </div>

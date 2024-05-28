@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/Post.astro"
 title: "LetrasSinFiltro"
-description: "LetrasSinFiltro es un generador de frases con IA y futura Red Social enfocada en el desahogo en frases e indirectas."
+description: "LetrasSinFiltro es un generador de frases con IA y una futura red social enfocada en el desahogo a través de frases e indirectas."
 website: "https://letrassinfiltro.vercel.app/"
 date: "Apr 26,  2024"
 read: "2 min lectura"
@@ -15,11 +15,11 @@ authorImage: "https://res.cloudinary.com/dctldwa03/image/upload/v1714420331/t3aw
 
 # LetrasSinFiltro
 
-LetrasSinFiltro es un generador de frases con IA y futura Red Social enfocada en el desahogo en frases e indirectas.
+LetrasSinFiltro es un generador de frases con IA y una futura red social enfocada en el desahogo a través de frases e indirectas.
 
-LetrasSinFiltro es una plataforma que te ayuda a decir lo que sientes de forma original y creativa. Elige entre miles de frases e indirectas para cada situación: amor, desamor, amistad, trabajo.
+LetrasSinFiltro es una plataforma que te ayuda a expresar lo que sientes de forma original y creativa. Elige entre miles de frases e indirectas para cada situación: amor, desamor, amistad, trabajo.
 
-- La pagina esta creada con NextJS como framework FrontEnd utilizando TailwindCSS para los estilos. Tambien usa Mongoose y MongoDb para la conexion y manejo de la base de datos.
+- La página está creada con NextJS como framework FrontEnd, utilizando TailwindCSS para los estilos. También usa Mongoose y MongoDB para la conexión y manejo de la base de datos.
 
 #### Tecnologias usadas
 1. Javascript & TypeScript
