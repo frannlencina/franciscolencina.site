@@ -1,84 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ErrorImg from "../assets/imgs/404error.png";
-
+import { BackToHBtn } from "../components/BackToHBtn";
 ---
-	<Layout title="Portfolio - 404 Error">
-		<main class="container h-screen mx-auto">
-			<div class="Error ">
-				<img class="mx-auto" src={ErrorImg} alt="Error 404 Image" />
-			</div>
-			<div
-				class="errorText p-4 relative top-[-90px] sm:top-[-120px]  flex-col text-center items-center justify-center"
-			>
-				<div class="block text-center mt-4">
-					<h2
-						class="title-gradient dark:bg-gradient-to-r from-[var(--blue)] to-white"
-					>
-						ERROR
-					</h2>
-				</div>
-				<p class="text-2xl mx-auto max-w-xl opacity-80 dark:text-white">
-					Oops!, La pagina que estas buscando no se pudo encontrar.
-				</p>
-				<div class="my-6">
-					<a
-						class="max-w-fit gap-2 px-5 py-4 rounded-xl bg-[#344FA0] font-medium text-white sm:px-6 sm:py-3 sm:rounded-lg hover:text-black duration-200 hover:scale-105"
-						href="/"
-					>
-						<i class="ri-arrow-left-line relative top-0.5"></i> Back to home
-					</a>
-				</div>
-			</div>
-		</main>
-	</Layout>
-	<style>
-		.title-gradient {
-			background-image: var(--blue-gradient);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 400%;
-			background-position: 0%;
-			font-weight: 800;
-			font-size: 60px;
-		}
-		.title-gradient::.dark {
-			background-image: var(--blue-white);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 400%;
-			background-position: 0%;
-			font-weight: 800;
-			font-size: 35px;
-		}
-		@media (min-width: 0px) {
-			.title-gradient {
-				font-size: 45px;
-			}
-		}
-		@media (min-width: 235px) {
-			.title-gradient {
-				font-size: 60px;
-			}
-		}
-		@media (min-width: 317px) {
-			.title-gradient {
-				font-size: 80px;
-			}
-		}
-		@media (min-width: 400px) {
-			.title-gradient {
-				font-size: 100px;
-			}
-		}
-		@media (min-width: 640px) {
-			.title-gradient {
-				font-size: 110px;
-			}
-		}
 
-		p {
-			font-family: monospace;
-		}
-	</style>
-</html>
+<Layout title="Portfolio - 404 Error">
+	<main class="w-full flex flex-col justify-center items-center h-screen mx-auto bg-[#E2E2E2] dark:bg-[#181818] p-4 ">
+		<div class="text-black text-center max-w-3xl mx-auto dark:text-white">
+			<h2 class="text-8xl font-black">404</h2>
+			<h2 class="text-5xl font-extrabold">page error</h2>
+			<h4 class="text-xl font-normal my-3 opacity-60">Oops!, La pagina que estas buscando no se pudo encontrar.</h4>
+		</div>
+		<div>
+			<BackToHBtn text="Volver" website="/" />
+		</div>
+	</main>
+</Layout>
+<style></style>
