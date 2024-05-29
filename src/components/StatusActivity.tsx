@@ -18,8 +18,6 @@ export default function StatusActivity() {
             }
 
         };
-        console.log(activity)
-
 
         fetchData();
 
