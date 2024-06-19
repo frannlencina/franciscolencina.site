@@ -42,7 +42,7 @@ export default function StatusActivity() {
             {
                 showModal ?
                     <div className='fixed z-20 bg-black bg-opacity-80 left-0 top-0 w-screen h-screen'>
-                        <div className='absolute px-6 py-4 z-30 left-[30%] md:left-[40%] top-[30%] m-6  sm:min-w-[200px] bg-[#e9e9e9] rounded-xl shadow-xl'>
+                        <div className='absolute text-black px-6 py-4 z-30 left-[30%] md:left-[40%] top-[30%] m-6 sm:min-w-[200px] bg-[#e9e9e9] rounded-xl shadow-xl'>
                             <h4 className='text-sm sm:text-lg text-black opacity-80 font-black'>Aplicaciones que estoy utilizando</h4>
                             <div className='flex flex-col gap-2'>
                                 {
