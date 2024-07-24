@@ -1,8 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-
 import ThemeMdsbtn from '../components/ThemeMdsBtn';
-import HearthEmoji from "../assets/imgs/HearthEmoji.png";
 const defaultStyle = "opacity-40 hover:opacity-100";
 ---
 
@@ -37,7 +34,7 @@ const defaultStyle = "opacity-40 hover:opacity-100";
             </div>
 
             <div class="flex items-end gap-2 text-xl">
-                <ThemeMdsbtn client:only/>
+                <ThemeMdsbtn client:only="react"/>
             </div>
         </div>
         <div

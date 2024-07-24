@@ -3,4 +3,4 @@ Disallow: /private/
 Disallow: /admin/
 Allow: /public/
 
-Sitemap: https://www.franciscolencina.site/sitemap.xml
+Sitemap: https://franciscolencina.site/sitemap-index.xml
