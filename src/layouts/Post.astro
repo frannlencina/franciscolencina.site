@@ -19,6 +19,7 @@ const { author, authorImage, title, description, date, read, image, website } =
 						class="flex gap-2 mt-4 px-5 py-2 font-medium text-black text-[var(--blue-dark)] rounded-md transition-all duration-200 opacity-50 hover:opacity-100 dark:text-white"
 						href={website}
 						target="_blank"
+						arial-label=`Visitar pagina de ${title} `
 					>
 						<i class="ri-movie-line text-black dark:text-white"></i>
 						<span
@@ -32,7 +33,7 @@ const { author, authorImage, title, description, date, read, image, website } =
 						<img
 							class="w-10 rounded-full"
 							src={authorImage}
-							alt=""
+							alt="Imagen sobre el autor del proyecto"
 						/>
 					</div>
 					<div class="flex flex-col">

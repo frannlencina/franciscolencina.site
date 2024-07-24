@@ -11,151 +11,164 @@ const projectsEntries = await getCollection("projects");
 ---
 
 <Layout title="Francisco Lencina : Portfolio">
-	<main class="w-full m-0">
-		<!-- PROFILE SECTION -->
-		<section class="flex justify-between w-full p-6 mx-auto" id="Profile">
-			<div
-				class="flex flex-col-reverse sm:flex-row items-center justify-between gap-8 max-w-[830px] mx-auto mt-6 md:mt-48"
-			>
-			
-				<div class="max-w-md">
-					<div class="flex flex-col">
-						<h4 class="font-regular text-[#444444] dark:text-white text-xl">
-							hola amig@ 👋
-						</h4>
-						<h1 class="ml-4 font-bold text-4xl text-black dark:text-white">
-							Soy Francisco
-						</h1>
-						<p
-							class="text-start text-black dark:text-white text-md sm:text-lg font-regular opacity-60 mt-4"
-						>
-						Tengo 20 años, vivo en Uruguay y soy Front End Developer. Soy autodidacta, apasionado por la tecnología y por cómo está desarrollada. Actualmente estoy estudiando Tecnólogo en Informática.
-						</p>
-					</div>
-					<div
-						class="flex justify-center items-center sm:justify-start gap-4 ml-4 my-5"
-					>
-						<a
-							download
-							target="_blank"
-							href="/francisco-lencina-curriculum.pdf"
-							class="px-4 py-2 text-white text-opacity-90 font-semibold border border-[#737373] rounded-lg bg-gradient-to-t from-[#0B0B0B] to-[#212121] hover:ring-2 ring-stone-700 dark:ring-stone-500"
-							>Descargar CV</a
-						>
-						<div
-							class="flex text-black dark:text-white opacity-50 justify-center items-center gap-2 text-2xl"
-						>
-							<a
-								class="opacity-50 hover:opacity-100"
-								href="https://github.com/frannlencina"
-								target="_blank"
-								><i class="ri-github-line"></i></a
-							>
-							<a
-								class="opacity-50 hover:opacity-100"
-								href="https://twitter.com/franlencinaa"
-								target="_blank"
-								><i class="ri-twitter-line"></i></a
-							>
-							<a
-								class="opacity-50 hover:opacity-100"
-								href="mailto:franciscolencinap@gmail.com"
-								><i class="ri-mail-star-line"></i></a
-							>
-						</div>
-					</div>
-				</div>
-				<div>
-					<StatusActivity client:load />
-					<img src="/yo-imagen.png" alt="Imagen  de Francisco" />
-				</div>
-			</div>
-		</section>
-		<section class="bg-[#E2E2E2] dark:bg-[#181818] w-full p-6">
-			<section
-				class="max-w-[830px] mt-56 mx-auto relative -top-28"
-				id="Proyectos"
-			>
-				<h4 class="text-black dark:text-white font-medium text-xl">Proyectos</h4>
+  <main class="w-full m-0">
+    <!-- PROFILE SECTION -->
+    <section class="flex justify-between w-full p-6 mx-auto" id="Profile">
+      <div
+        class="flex flex-col-reverse sm:flex-row items-center justify-between gap-8 max-w-[830px] mx-auto mt-6 md:mt-48"
+      >
+        <div class="max-w-md">
+          <div class="flex flex-col">
+            <span class="font-regular text-[#444444] dark:text-white text-xl">
+              hola amig@ 👋
+            </span>
+            <h1 class="ml-4 font-bold text-4xl text-black dark:text-white">
+              Soy Francisco
+            </h1>
+            <p
+              class="text-start text-black dark:text-white text-md sm:text-lg font-regular opacity-60 mt-4"
+            >
+              Tengo 20 años, vivo en Uruguay y soy Front End Developer. Soy
+              autodidacta, apasionado por la tecnología y por cómo está
+              desarrollada. Actualmente estoy estudiando Tecnólogo en
+              Informática.
+            </p>
+          </div>
+          <div
+            class="flex justify-center items-center sm:justify-start gap-4 ml-4 my-5"
+          >
+            <a
+              download
+              target="_blank"
+              href="/francisco-lencina-curriculum.pdf"
+              aria-label="Descargar CV"
+              class="px-4 py-2 text-white text-opacity-90 font-semibold border border-[#737373] rounded-lg bg-gradient-to-t from-[#0B0B0B] to-[#212121] hover:ring-2 ring-stone-700 dark:ring-stone-500"
+              >Descargar CV</a
+            >
+            <div
+              class="flex text-black dark:text-white opacity-50 justify-center items-center gap-2 text-2xl"
+            >
+              <a
+                class="opacity-50 hover:opacity-100"
+                aria-label="Github Link"
+                href="https://github.com/frannlencina"
+                target="_blank"><i class="ri-github-line"></i></a
+              >
+              <a
+                class="opacity-50 hover:opacity-100"
+                aria-label="Twitter/X Link"
+                href="https://twitter.com/franlencinaa"
+                target="_blank"><i class="ri-twitter-line"></i></a
+              >
+              <a
+                class="opacity-50 hover:opacity-100"
+                aria-label="Gmail Link"
+                href="mailto:franciscolencinap@gmail.com"
+                ><i class="ri-mail-star-line"></i></a
+              >
+            </div>
+          </div>
+        </div>
+        <div>
+          <StatusActivity client:load />
+          <img src="/yo-imagen.webp" alt="Imagen de Francisco Lencina" />
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#E2E2E2] dark:bg-[#181818] w-full p-6">
+      <section
+        class="max-w-[830px] mt-56 mx-auto relative -top-28"
+        id="Proyectos"
+      >
+        <h2 class="text-black dark:text-white font-medium text-xl">
+          Proyectos
+        </h2>
 
-				<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-					{
-						projectsEntries.map((item) => (
-							<article class="group flex text-black dark:text-white border border-[#C2C2C2] dark:border-[#3A3A3A] dark:hover:border-[#585858] hover:scale-[1.01] bg-[#F3F3F3] dark:bg-[#242424] px-6 py-4 rounded-xl cursor-pointer transition-all duration-200">
-								<a href={`/projects/${item.slug}`}>
-									<div class="flex flex-col gap-2">
-										<h5 class="text-lg font-bold opacity-70 group-hover:opacity-100 transition-all duration-200">
-											{item.data.title}
-										</h5>
-										<div class="flex justify-between items-start text-black dark:text-white overflow-hidden max-h-[75px]">
-											<div class="max-w-[90%]">
-												<p class="opacity-50 group-hover:opacity-100 transition-all duration-200 text-start align-start">
-													{item.data.description}
-												</p>
-											</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+          {
+            projectsEntries.map((item) => (
+              <article class="group flex text-black dark:text-white border border-[#C2C2C2] dark:border-[#3A3A3A] dark:hover:border-[#585858] hover:scale-[1.01] bg-[#F3F3F3] dark:bg-[#242424] px-6 py-4 rounded-xl cursor-pointer transition-all duration-200">
+                <a
+                  href={`/projects/${item.slug}`}
+                  aria-label={`Leer mas sobre ${item.data.title}`}
+                >
+                  <div class="flex flex-col gap-2">
+                    <h5 class="text-lg font-bold opacity-70 group-hover:opacity-100 transition-all duration-200">
+                      {item.data.title}
+                    </h5>
+                    <div class="flex justify-between items-start text-black dark:text-white overflow-hidden max-h-[75px]">
+                      <div class="max-w-[90%]">
+                        <p class="opacity-50 group-hover:opacity-100 transition-all duration-200 text-start align-start">
+                          {item.data.description}
+                        </p>
+                      </div>
 
-											<div class="flex justify-end items-end text-start mt-12">
-												<i class="ri-arrow-right-line opacity-70" />
-											</div>
-										</div>
-									</div>
-								</a>
-							</article>
-						))
-					}
-				</div>
-			</section>
+                      <div class="flex justify-end items-end text-start mt-12">
+                        <i class="ri-arrow-right-line opacity-70" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            ))
+          }
+        </div>
+      </section>
 
-			<section class="max-w-[830px] mx-auto" id="Skills">
-				<div>
-					<h5 class="text-black dark:text-white font-medium text-xl">Stack</h5>
-					<div
-						class="grid grid-cols-2 sm:grid sm:grid-cols-4 lg:grid-cols-6 sm:gap-4 mt-8 pb-32 items-center"
-					>
-						{
-							Languages.map((item) => (
-								<div class="group flex flex-col items-center justify-center">
-									<div class="group-hover:opacity-100 opacity-0 transition-all duration-100 ">
-										<Tooltip text={item.name} />
-									</div>
-									<div class="max-w-14 hover:scale-125">
-										<img
-											class="w-full h-auto rounded-xl"
-											src={item.image}
-											alt=""
-											srcset=""
-										/>
-									</div>
-								</div>
-							))
-						}
-					</div>
-				</div>
-				<div>
-					<h5 class="text-black dark:text-white font-medium text-xl">Herramientas</h5>
-					<div
-						class="grid grid-cols-2 sm:grid sm:grid-cols-4 sm:gap-4 lg:grid-cols-6 mt-8 pb-32 mx-auto items-center"
-					>
-						{
-							Frameworks.map((item) => (
-							<div class="group flex flex-col items-center justify-center">
-									<div class="group-hover:opacity-100 opacity-0 transition-all duration-100 ">
-										<Tooltip text={item.name} />
-									</div>
-									<div class="max-w-14 hover:scale-125">
-										<img
-											class="w-full h-auto rounded-xl"
-											src={item.image}
-											alt=""
-											srcset=""
-										/>
-									</div>
-								</div>
-							))
-						}
-					</div>
-				</div>
-			</section>
-		</section>
-	</main>
+      <section class="max-w-[830px] mx-auto" id="Skills">
+        <div>
+          <h2 class="text-black dark:text-white font-medium text-xl">Stack</h2>
+          <div
+            class="grid grid-cols-2 sm:grid sm:grid-cols-4 lg:grid-cols-6 sm:gap-4 mt-8 pb-32 items-center"
+          >
+            {
+              Languages.map((item) => (
+                <div class="group flex flex-col items-center justify-center">
+                  <div class="group-hover:opacity-100 opacity-0 transition-all duration-100 ">
+                    <Tooltip text={item.name} />
+                  </div>
+                  <div class="max-w-14 hover:scale-125">
+                    <img
+                      width="50px"
+                      height="50px"
+                      class="w-full h-auto rounded-xl"
+                      src={item.image}
+                      alt={`Logo de ${item.name}`}
+                    />
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+        <div>
+          <h2 class="text-black dark:text-white font-medium text-xl">
+            Herramientas
+          </h2>
+          <div
+            class="grid grid-cols-2 sm:grid sm:grid-cols-4 sm:gap-4 lg:grid-cols-6 mt-8 pb-32 mx-auto items-center"
+          >
+            {
+              Frameworks.map((item) => (
+                <div class="group flex flex-col items-center justify-center">
+                  <div class="group-hover:opacity-100 opacity-0 transition-all duration-100 ">
+                    <Tooltip text={item.name} />
+                  </div>
+                  <div class="max-w-14 hover:scale-125">
+                    <img
+                      width="50px"
+                      height="50px"
+                      class="w-full h-auto rounded-xl"
+                      src={item.image}
+                      alt={`Logo de ${item.name}`}
+                    />
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
 </Layout>
