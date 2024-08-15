@@ -1,5 +1,4 @@
 ---
-import StatusActivity from "../components/StatusActivity";
 import Tooltip from "../components/Tooltip";
 import Layout from "../layouts/Layout.astro";
 
@@ -70,7 +69,6 @@ const projectsEntries = await getCollection("projects");
           </div>
         </div>
         <div>
-          <StatusActivity client:load />
           <img src="/yo-imagen.webp" alt="Imagen de Francisco Lencina" />
         </div>
       </div>

@@ -15,7 +15,7 @@
 		"@astrojs/sitemap": "^3.1.6",
 		"@astrojs/tailwind": "^5.1.0",
 		"@astrojs/ts-plugin": "^1.8.0",
-		"@headlessui/react": "^1.7.13",
+		"@headlessui/react": "^1.7.19",
 		"@types/react": "^18.3.1",
 		"@types/react-dom": "^18.3.0",
 		"astro": "^4.9.2",
