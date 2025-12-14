@@ -12,5 +12,8 @@ export default defineConfig({
   output: "hybrid",
   site: 'https://franciscolencina.site/',
   integrations: [tailwind(), react(), sitemap()],
-  adapter: netlify()
+  adapter: netlify(),
+  test: {
+    environment: 'jsdom',
+  },
 });
